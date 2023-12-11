@@ -1,3 +1,4 @@
+//функция плавного скрола -------------------------------------------------------------------
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -15,11 +16,107 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
   });
-
+//функция добавлении названия файла -------------------------------------------------------------------
+var FileName = document.querySelector(".input__file__label");
+FileName.style.color = "#b0b0b0"  
   function showFileName(input) {
     var file = input.files[0];
     var fileName = file.name;
     var targetBlock = document.getElementById("input__file__label");
     targetBlock.textContent = fileName;
+    targetBlock.style.color = "#000"
   }
-  
+
+// подчеркивание элементов меню -------------------------------------------------------------------
+var aboutModule = document.getElementById('about');
+var servicesModule = document.getElementById('services');
+var projectsModule = document.getElementById('projects');
+var contactModule = document.getElementById('contact');
+var menu1 = document.getElementById("menu1");
+//menu1.style.borderBottom = "1px solid #31D8B0 "
+var menu2 = document.getElementById("menu2");
+var menu3 = document.getElementById("menu3");
+var menu4 = document.getElementById("menu4");
+// Определяем функцию для отслеживания позиции прокрутки страницы
+function trackScroll() {
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Define the height of the header
+  var headerHeight = 150;
+
+  // Define the height of each module on the page
+  var aboutModuleHeight = aboutModule.offsetHeight;
+  var servicesModuleHeight = servicesModule.offsetHeight;
+  var projectsModuleHeight = projectsModule.offsetHeight;
+  var contactModuleHeight = contactModule.offsetHeight;
+  var pageHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+
+  // Compare the scroll position with the positions of the modules
+  if (scrollPosition < aboutModuleHeight + pageHeight - headerHeight) {
+    menu1.style.borderBottom = "1px solid #31D8B0";
+    menu2.style.borderBottom = "none";
+    menu3.style.borderBottom = "none";
+    menu4.style.borderBottom = "none";
+  } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight - headerHeight) {
+    menu2.style.borderBottom = "1px solid #31D8B0";
+    menu1.style.borderBottom = "none";
+    menu3.style.borderBottom = "none";
+    menu4.style.borderBottom = "none";
+  } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + projectsModuleHeight - headerHeight) {
+    menu3.style.borderBottom = "1px solid #31D8B0";
+    menu1.style.borderBottom = "none";
+    menu2.style.borderBottom = "none";
+    menu4.style.borderBottom = "none";
+  } else {
+    menu1.style.borderBottom = "none";
+    menu2.style.borderBottom = "none";
+    menu3.style.borderBottom = "none";
+    menu4.style.borderBottom = "1px solid #31D8B0";
+  }
+  if (scrollPosition <= headerHeight) {
+    menu1.style.borderBottom = "none";
+    menu2.style.borderBottom = "none";
+    menu3.style.borderBottom = "none";
+    menu4.style.borderBottom = "none";
+  }
+}
+
+// Вызываем функцию отслеживания позиции прокрутки при прокрутке страницы
+window.addEventListener('scroll', trackScroll);
+
+
+// функционал валидации -------------------------------------------------------------------
+var ErrorForm = true;
+
+function CheckErrorForm() {
+  // Проверяем, заполнены ли все поля формы
+  var name = document.querySelector('.contact__form input[type="text"][placeholder="Имя*"]').value;
+  var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]').value;
+  var message = document.querySelector('.contact__form textarea').value;
+  var FileName = document.querySelector(".input__file__label").textContent;
+  var re = /\S+@\S+\.\S+/;
+  if (name && email && message && FileName != "Прикрепите файл" && re.test(email)) {
+    ErrorForm = false;
+  } else {
+    ErrorForm = true;
+  }
+}
+
+function SubmitForm(){
+  CheckErrorForm(); // Вызываем функцию для проверки формы перед проверкой значения ErrorForm
+  console.log(ErrorForm);
+  if(!ErrorForm){
+    console.log("Отправил");
+  }else{
+    console.log("неа");
+  }
+}
+// слайдер-------------------------------------------------
+const slider = document.querySelector('.slider');
+
+slider.addEventListener('scroll', () => {
+  const scrollPosition = slider.scrollLeft;
+  const slideWidth = slider.clientWidth / 3;
+  const currentSlide = Math.round(scrollPosition / slideWidth);
+  console.log('Текущий слайд:', currentSlide);
+});
