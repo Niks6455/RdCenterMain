@@ -1,0 +1,49 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var slides = document.querySelectorAll(".slide");
+    var dotsContainer = document.querySelector(".dots");
+    var dots = [];
+
+    for (var i = 0; i < slides.length; i++) {
+      var dot = document.createElement("div");
+      dot.className = "dot";
+      dot.dataset.index = i;
+      dotsContainer.appendChild(dot);
+      dots.push(dot);
+    }
+
+    var currentIndex = 0;
+    var intervalId;
+
+    showSlide(currentIndex);
+
+    // Функция для автоматического перелистывания слайдов
+    function autoSlide() {
+      currentIndex++;
+      if (currentIndex >= slides.length) {
+        currentIndex = 0;
+      }
+      showSlide(currentIndex);
+    }
+
+    // Запустить автоматическое перелистывание каждые 3 секунды
+    intervalId = setInterval(autoSlide, 3000);
+
+    function showSlide(index) {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+        dots[i].classList.remove("active");
+      }
+      slides[index].classList.add("active");
+      dots[index].classList.add("active");
+    }
+
+    // Обработчик события для точек слайдов
+    dotsContainer.addEventListener("click", function(event) {
+      if (event.target.classList.contains("dot")) {
+        clearInterval(intervalId); // Остановить автоматическое перелистывание
+        var index = parseInt(event.target.dataset.index);
+        currentIndex = index;
+        showSlide(currentIndex);
+      }
+    });
+  });
