@@ -112,11 +112,15 @@ function SubmitForm(){
   }
 }
 // слайдер-------------------------------------------------
-const slider = document.querySelector('.slider');
 
-slider.addEventListener('scroll', () => {
-  const scrollPosition = slider.scrollLeft;
-  const slideWidth = slider.clientWidth / 3;
-  const currentSlide = Math.round(scrollPosition / slideWidth);
-  console.log('Текущий слайд:', currentSlide);
+window.addEventListener('resize', function() {
+  if (window.innerWidth < 990) {
+    var block = document.querySelector('.Services'); 
+    var block2 = document.querySelector('.Project'); 
+
+    if (block && block2) {
+      block.remove();
+      block2.remove();
+    }
+  }
 });

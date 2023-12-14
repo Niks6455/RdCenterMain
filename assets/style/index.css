@@ -550,7 +550,9 @@ textarea::placeholder {
 .ServicesMobile {
     display: none;
 }
-
+.ProjectMoble{
+    display: none;
+}
 @media(max-width:1266px) {
     .aboutTxet p {
         font-size: 22px;
@@ -770,7 +772,6 @@ textarea::placeholder {
 
 @media(max-width:990px) {
 
-   
     /* Services */
     .Services {
         display: none;
@@ -903,4 +904,29 @@ textarea::placeholder {
         justify-content: center;
         width: 100%;
       }
+      .main__page p {
+        left: 50px;
+    }
+    .input, textarea, .input__file{
+        width: 300px!important;
+    }
+    .contact__form{
+        width: 300px!important;
+    }
+    .block_form{
+        width: 300px!important;
+        left: 45%;
+    }
+    .block__footer__button{
+        width: 300px;
+    }
+    form{
+        left: 35px;
+    }
+    .center{
+        padding-top: 50px;
+    }
+}
+@media(max-width:880px){
+
 }
