@@ -561,6 +561,15 @@ textarea::placeholder {
 .header__burger{
     display: none;
 }
+.imgMainLine{
+    display: block;
+}
+.peopleAbout{
+    display: none;
+}
+.ServicesMobleBg{
+display: none;
+}
 @media(max-width:1266px) {
     .aboutTxet p {
         font-size: 22px;
@@ -784,18 +793,32 @@ textarea::placeholder {
     .Services {
         display: none;
     }
-
+    
     .ServicesMobile {
         width: 100%;
         display: block;
         position: relative;
         height: 535px;
-        margin-bottom: 50px;
-        background-color: #000000;
+        margin-bottom: 200px;
+        top: -100px;
     }
-
+    .center{
+        background-color: #000;
+        position: relative;
+        bottom: -109px;
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+   
+    .ServicesMobleBg{
+        display: block;
+        position: relative;
+        top: 12px;
+        width: 100%;
+    }
     .ServicesMobile img {
-
         position: absolute;
         left: 0;
         top: 0;
@@ -804,24 +827,20 @@ textarea::placeholder {
 
     .blockMobText__inner {
         position: relative;
-        top: 50px;
         z-index: 10;
         display: flex;
     }
 
-    .center {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    .servMob__inner{
+        position: relative;
     }
-
     .blockMobText__img img {
         width: 55px;
         height: 55px;
-        position: relative;
+        position: absolute;
 
     }
-
+   
     .blockMobText {
         position: relative;
         bottom: 10px;
@@ -831,8 +850,20 @@ textarea::placeholder {
     .blockMobText p {
         font-size: 22px;
     }
-
+    .button__message__block{
+        position: relative;
+        top: 75px;
+      
+    }
     /* Project */
+    .lineProject{
+        position: absolute;
+        right: 0;
+      
+    }
+    .slider-container{
+        margin-top: 40px;
+    }
     .Project {
         display: none;
     }
@@ -843,12 +874,12 @@ textarea::placeholder {
         width: 100%;
         position: relative;
         top: -35px;
-        margin-top: 75px;
+        margin-top: -75px;
     }
 
     .slider-container {
         width: 100%;
-        height: 450px;
+        height: 500px;
         position: relative;
         overflow: hidden;
 
@@ -1085,9 +1116,9 @@ header{
 .home-background-center{
     transform: rotate(-90deg);
     position: absolute;
-    right: -200px;
-    top: 240px;
-    width: 95vh;
+    right: -500px;
+    top: 35%;
+    width: 70vh;
 }
 .home-background{
     transform: rotate(-90deg);
@@ -1096,4 +1127,26 @@ header{
     top: 140px;
     width: 95vh;
 }
+.main__page p{
+    position: absolute;
+    top: 10%;
+    left: 20px;
+}
+.home-background-logoGlav{
+    position: absolute;
+    left: 35px;
+    top: 40%;
+
+}
+.imgMainLine{
+    display: block;
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+}
+.home-background-arrow{
+    display: none;
+}
+
+
 }
