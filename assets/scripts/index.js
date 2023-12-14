@@ -28,57 +28,98 @@ FileName.style.color = "#b0b0b0"
   }
 
 // подчеркивание элементов меню -------------------------------------------------------------------
-var aboutModule = document.getElementById('about');
-var servicesModule = document.getElementById('services');
-var projectsModule = document.getElementById('projects');
-var contactModule = document.getElementById('contact');
 var menu1 = document.getElementById("menu1");
-//menu1.style.borderBottom = "1px solid #31D8B0 "
 var menu2 = document.getElementById("menu2");
 var menu3 = document.getElementById("menu3");
 var menu4 = document.getElementById("menu4");
 // Определяем функцию для отслеживания позиции прокрутки страницы
 function trackScroll() {
-  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+ 
+
+
+  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
   // Define the height of the header
   var headerHeight = 150;
 
   // Define the height of each module on the page
-  var aboutModuleHeight = aboutModule.offsetHeight;
-  var servicesModuleHeight = servicesModule.offsetHeight;
-  var projectsModuleHeight = projectsModule.offsetHeight;
-  var contactModuleHeight = contactModule.offsetHeight;
+  if(window.innerWidth < 990){
+    var aboutModuleHeight = document.getElementById('about').offsetHeight;
+    var servicesModuleHeight = document.getElementById('servicesmob').offsetHeight;
+    var projectsModuleHeight = document.getElementById('projectsmob').offsetHeight;
+  }
+  else{
+    var aboutModuleHeight = document.getElementById('about').offsetHeight;
+    var servicesModuleHeight = document.getElementById('services').offsetHeight;
+    var projectsModuleHeight = document.getElementById('projects').offsetHeight;
+}
+ 
+  var contactModuleHeight = document.getElementById('contact').offsetHeight;
   var pageHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+  console.log(aboutModuleHeight);
+  console.log(servicesModuleHeight);
+  console.log(projectsModuleHeight);
+  console.log(contactModuleHeight);
 
   // Compare the scroll position with the positions of the modules
-  if (scrollPosition < aboutModuleHeight + pageHeight - headerHeight) {
-    menu1.style.borderBottom = "1px solid #31D8B0";
-    menu2.style.borderBottom = "none";
-    menu3.style.borderBottom = "none";
-    menu4.style.borderBottom = "none";
-  } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight - headerHeight) {
-    menu2.style.borderBottom = "1px solid #31D8B0";
-    menu1.style.borderBottom = "none";
-    menu3.style.borderBottom = "none";
-    menu4.style.borderBottom = "none";
-  } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + projectsModuleHeight - headerHeight) {
-    menu3.style.borderBottom = "1px solid #31D8B0";
-    menu1.style.borderBottom = "none";
-    menu2.style.borderBottom = "none";
-    menu4.style.borderBottom = "none";
-  } else {
-    menu1.style.borderBottom = "none";
-    menu2.style.borderBottom = "none";
-    menu3.style.borderBottom = "none";
-    menu4.style.borderBottom = "1px solid #31D8B0";
+  if(window.innerWidth > 990){
+    if (scrollPosition < aboutModuleHeight + pageHeight - headerHeight) {
+      menu1.style.borderBottom = "1px solid #31D8B0";
+      menu2.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "none";
+    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight - headerHeight) {
+      menu2.style.borderBottom = "1px solid #31D8B0";
+      menu1.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "none";
+    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + projectsModuleHeight - headerHeight) {
+      menu3.style.borderBottom = "1px solid #31D8B0";
+      menu1.style.borderBottom = "none";
+      menu2.style.borderBottom = "none";
+      menu4.style.borderBottom = "none";
+    } else {
+      menu1.style.borderBottom = "none";
+      menu2.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "1px solid #31D8B0";
+    }
+    if (scrollPosition <= headerHeight) {
+      menu1.style.borderBottom = "none";
+      menu2.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "none";
+    }
+  }else{
+    if (scrollPosition < aboutModuleHeight + 600 ) {
+      menu1.style.borderBottom = "1px solid #31D8B0";
+      menu2.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "none";
+    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + 600 ) {
+      menu2.style.borderBottom = "1px solid #31D8B0";
+      menu1.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "none";
+    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + projectsModuleHeight + 600) {
+      menu3.style.borderBottom = "1px solid #31D8B0";
+      menu1.style.borderBottom = "none";
+      menu2.style.borderBottom = "none";
+      menu4.style.borderBottom = "none";
+    } else {
+      menu1.style.borderBottom = "none";
+      menu2.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "1px solid #31D8B0";
+    }
+    if (scrollPosition <= headerHeight) {
+      menu1.style.borderBottom = "none";
+      menu2.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "none";
+    }
   }
-  if (scrollPosition <= headerHeight) {
-    menu1.style.borderBottom = "none";
-    menu2.style.borderBottom = "none";
-    menu3.style.borderBottom = "none";
-    menu4.style.borderBottom = "none";
-  }
+  
 }
 
 // Вызываем функцию отслеживания позиции прокрутки при прокрутке страницы
@@ -124,3 +165,16 @@ window.addEventListener('resize', function() {
     }
   }
 });
+
+btnabout = document.querySelector(".btnabout")
+var aboutText = document.querySelector(".block_slide")
+var aboutTxet = document.querySelector(".aboutTxet")
+btnabout.addEventListener("click", function(){
+  if(    aboutText.style.display === "none"){
+    aboutText.style.display = "block"
+    aboutTxet.classList.add("active")
+  }else{
+    aboutText.style.display = "none"
+    aboutTxet.classList.remove("active")
+  }
+})

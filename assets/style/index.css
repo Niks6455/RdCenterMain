@@ -553,6 +553,9 @@ textarea::placeholder {
 .ProjectMoble{
     display: none;
 }
+.buttonText{
+    display: none;
+}
 @media(max-width:1266px) {
     .aboutTxet p {
         font-size: 22px;
@@ -928,5 +931,43 @@ textarea::placeholder {
     }
 }
 @media(max-width:880px){
+    .About{
+        height: auto;
+        margin-bottom: 200px;
+    }
+.block_slide{
+    display: none;
+}
+.aboutTxet{
+    position: relative;
+    height: auto;
+    left: 0px;
+    padding: 0 100px;
+    padding: 75px 50px 20px 50px;
+    background-color: #ECEFEE;
+}
+.block_slide{
+    position: relative;
+    left: 0;
+    padding: 0;
+}
+
+.aboutTxet.active .buttonText{
+    transform: rotate(180deg);
+}
+.buttonText{
+    width: 100%;
+    display: flex;
+   justify-content: center;
+}
+.btnabout{
+    width: 25px;
+    height: 25px;
+    transition: 0.15s linear all;
+}
+.btnabout:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
 
 }
