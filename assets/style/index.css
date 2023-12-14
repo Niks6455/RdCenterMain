@@ -550,10 +550,15 @@ textarea::placeholder {
 .ServicesMobile {
     display: none;
 }
-.ProjectMoble{
+
+.ProjectMoble {
     display: none;
 }
-.buttonText{
+
+.buttonText {
+    display: none;
+}
+.header__burger{
     display: none;
 }
 @media(max-width:1266px) {
@@ -790,61 +795,67 @@ textarea::placeholder {
     }
 
     .ServicesMobile img {
-        
+
         position: absolute;
         left: 0;
         top: 0;
 
     }
-    
+
     .blockMobText__inner {
         position: relative;
         top: 50px;
         z-index: 10;
         display: flex;
     }
-    .center{
+
+    .center {
         display: flex;
         justify-content: center;
         width: 100%;
     }
+
     .blockMobText__img img {
         width: 55px;
         height: 55px;
         position: relative;
 
     }
-    .blockMobText{
-       position: relative;
-       bottom: 10px;
-       left: 15px;
+
+    .blockMobText {
+        position: relative;
+        bottom: 10px;
+        left: 15px;
     }
+
     .blockMobText p {
         font-size: 22px;
     }
+
     /* Project */
     .Project {
         display: none;
     }
-    .ProjectMoble{
+
+    .ProjectMoble {
         display: flex;
         justify-content: center;
         width: 100%;
-       margin-bottom: 50px;
-       position: relative;
-       top: -35px;
-       margin-top: 100px;
+        position: relative;
+        top: -35px;
+        margin-top: 75px;
     }
+
     .slider-container {
         width: 100%;
         height: 450px;
         position: relative;
         overflow: hidden;
-    
-       
-      }
-      
-      .slide {
+
+
+    }
+
+    .slide {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -854,13 +865,13 @@ textarea::placeholder {
         transition: opacity 0.5s ease-in-out;
         display: flex;
         justify-content: center;
-      }
-      
-      .slide.active {
+    }
+
+    .slide.active {
         opacity: 1;
-      }
-      
-      .dots {
+    }
+
+    .dots {
         position: absolute;
         bottom: 0px;
         left: 50%;
@@ -868,106 +879,221 @@ textarea::placeholder {
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-      
-      .dot {
+    }
+
+    .dot {
         width: 10px;
         height: 10px;
         border-radius: 50%;
         background-color: #ccc;
         margin: 0 5px;
         cursor: pointer;
-        
-      }
-      
-      .dot.active {
+
+    }
+
+    .dot.active {
         background-color: #000;
-      }
-     
-      .block_text_projMoble{
+    }
+
+    .block_text_projMoble {
         display: block;
         color: #000;
         position: relative;
         top: 25px;
         font-size: 20px;
-   
-      }
-      .block_text_projMoble a{
+
+    }
+
+    .block_text_projMoble a {
         position: absolute;
         right: 0;
         font-size: 16px;
-      }
-     
-      .block_text_projMoble p{
+    }
+
+    .block_text_projMoble p {
         text-align: center;
         max-width: 250px;
-      }
-      .nameProj{
+    }
+
+    .nameProj {
         display: flex;
         justify-content: center;
         width: 100%;
-      }
-      .main__page p {
+    }
+
+    .main__page p {
         left: 50px;
     }
-    .input, textarea, .input__file{
-        width: 300px!important;
+
+    .input,
+    textarea,
+    .input__file {
+        width: 300px !important;
     }
-    .contact__form{
-        width: 300px!important;
+
+    .contact__form {
+        width: 300px !important;
     }
-    .block_form{
-        width: 300px!important;
+
+    .block_form {
+        width: 300px !important;
         left: 45%;
     }
-    .block__footer__button{
+
+    .block__footer__button {
         width: 300px;
     }
-    form{
+
+    form {
         left: 35px;
     }
-    .center{
+
+    .center {
         padding-top: 50px;
     }
 }
-@media(max-width:880px){
-    .About{
+
+@media(max-width:880px) {
+    .About {
         height: auto;
         margin-bottom: 200px;
     }
-.block_slide{
+
+    .block_slide {
+        display: none;
+    }
+
+    .aboutTxet {
+        position: relative;
+        height: auto;
+        left: 0px;
+        padding: 0 100px;
+        padding: 75px 50px 20px 50px;
+        background-color: #ECEFEE;
+    }
+
+    .block_slide {
+        position: relative;
+        left: 0;
+        padding: 0;
+    }
+
+    .aboutTxet.active .buttonText {
+        transform: rotate(180deg);
+    }
+
+    .buttonText {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btnabout {
+        width: 25px;
+        height: 25px;
+        transition: 0.15s linear all;
+    }
+
+    .btnabout:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+
+    .About {
+        position: relative;
+    }
+
+    .peopleAbout {
+        display: block;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        top: 95px;
+    }
+
+    .main__page p {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .footer__title,
+    .footer__subtitle,
+    .footer__number {
+        display: none;
+    }
+
+    .footer__mail {
+        font-size: 24px;
+        position: relative;
+        left: 50px;
+        top: 35px;
+    }
+
+    .block_form {
+        position: relative;
+        left: 20px;
+        bottom: 0;
+        top: 140px;
+        right: 0;
+    }
+
+    .home-background-center {
+        width: 700px;
+    }
+
+    .block_logoFooter img {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        bottom: -20px;
+    }
+
+    .Psbottom p {
+        margin: 0px 0;
+    }
+
+    .block_line {
+        display: none;
+    }
+}
+
+@media(max-width:790px) {
+.header__burger{
+    display: block;
+}
+.nawPc{
     display: none;
 }
-.aboutTxet{
-    position: relative;
-    height: auto;
-    left: 0px;
-    padding: 0 100px;
-    padding: 75px 50px 20px 50px;
-    background-color: #ECEFEE;
+.header__burger{
+    display: block;
+    padding: 10px 20px 0px 0px ;
 }
-.block_slide{
-    position: relative;
-    left: 0;
-    padding: 0;
+.header__burger-line{
+    width: 30px;
+    height: 2px;
+    background-color: #000;
 }
-
-.aboutTxet.active .buttonText{
-    transform: rotate(180deg);
+.header__burger-line:first-child{
+    margin-bottom: 8px;
 }
-.buttonText{
-    width: 100%;
-    display: flex;
-   justify-content: center;
+.header__burger-line:last-child{
+    margin-top: 8px;
 }
-.btnabout{
-    width: 25px;
-    height: 25px;
-    transition: 0.15s linear all;
+header{
+    height: 60px;
 }
-.btnabout:hover{
-    opacity: 0.6;
-    cursor: pointer;
+.home-background-center{
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -200px;
+    top: 240px;
+    width: 95vh;
 }
-
+.home-background{
+    transform: rotate(-90deg);
+    position: absolute;
+    left:-220px;
+    top: 140px;
+    width: 95vh;
+}
 }

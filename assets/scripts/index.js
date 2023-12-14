@@ -1,31 +1,29 @@
 //функция плавного скрола -------------------------------------------------------------------
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-  
-      const href = this.getAttribute('href');
-      const targetElement = document.querySelector(href);
-  
-      if (targetElement) {
-        const offset = targetElement.offsetTop;
-        console.log(offset);
-        window.scrollTo({
-          top: offset,
-          behavior: 'smooth'
-        });
-      }
-    });
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      const offset = targetElement.offsetTop;
+      console.log(offset);
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+    }
   });
+});
 //функция добавлении названия файла -------------------------------------------------------------------
 var FileName = document.querySelector(".input__file__label");
-FileName.style.color = "#b0b0b0"  
-  function showFileName(input) {
-    var file = input.files[0];
-    var fileName = file.name;
-    var targetBlock = document.getElementById("input__file__label");
-    targetBlock.textContent = fileName;
-    targetBlock.style.color = "#000"
-  }
+FileName.style.color = "#b0b0b0"
+function showFileName(input) {
+  var file = input.files[0];
+  var fileName = file.name;
+  var targetBlock = document.getElementById("input__file__label");
+  targetBlock.textContent = fileName;
+  targetBlock.style.color = "#000"
+}
 
 // подчеркивание элементов меню -------------------------------------------------------------------
 var menu1 = document.getElementById("menu1");
@@ -34,35 +32,26 @@ var menu3 = document.getElementById("menu3");
 var menu4 = document.getElementById("menu4");
 // Определяем функцию для отслеживания позиции прокрутки страницы
 function trackScroll() {
- 
-
-
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-  // Define the height of the header
   var headerHeight = 150;
-
-  // Define the height of each module on the page
-  if(window.innerWidth < 990){
+  if (window.innerWidth < 990) {
     var aboutModuleHeight = document.getElementById('about').offsetHeight;
     var servicesModuleHeight = document.getElementById('servicesmob').offsetHeight;
     var projectsModuleHeight = document.getElementById('projectsmob').offsetHeight;
   }
-  else{
+  else {
     var aboutModuleHeight = document.getElementById('about').offsetHeight;
     var servicesModuleHeight = document.getElementById('services').offsetHeight;
     var projectsModuleHeight = document.getElementById('projects').offsetHeight;
-}
- 
+  }
+
   var contactModuleHeight = document.getElementById('contact').offsetHeight;
   var pageHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
   console.log(aboutModuleHeight);
   console.log(servicesModuleHeight);
   console.log(projectsModuleHeight);
   console.log(contactModuleHeight);
-
-  // Compare the scroll position with the positions of the modules
-  if(window.innerWidth > 990){
+  if (window.innerWidth > 990) {
     if (scrollPosition < aboutModuleHeight + pageHeight - headerHeight) {
       menu1.style.borderBottom = "1px solid #31D8B0";
       menu2.style.borderBottom = "none";
@@ -90,13 +79,13 @@ function trackScroll() {
       menu3.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
     }
-  }else{
-    if (scrollPosition < aboutModuleHeight + 600 ) {
+  } else {
+    if (scrollPosition < aboutModuleHeight + 600) {
       menu1.style.borderBottom = "1px solid #31D8B0";
       menu2.style.borderBottom = "none";
       menu3.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
-    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + 600 ) {
+    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + 600) {
       menu2.style.borderBottom = "1px solid #31D8B0";
       menu1.style.borderBottom = "none";
       menu3.style.borderBottom = "none";
@@ -119,10 +108,8 @@ function trackScroll() {
       menu4.style.borderBottom = "none";
     }
   }
-  
-}
 
-// Вызываем функцию отслеживания позиции прокрутки при прокрутке страницы
+}
 window.addEventListener('scroll', trackScroll);
 
 
@@ -143,21 +130,20 @@ function CheckErrorForm() {
   }
 }
 
-function SubmitForm(){
+function SubmitForm() {
   CheckErrorForm(); // Вызываем функцию для проверки формы перед проверкой значения ErrorForm
   console.log(ErrorForm);
-  if(!ErrorForm){
+  if (!ErrorForm) {
     console.log("Отправил");
-  }else{
+  } else {
     console.log("неа");
   }
 }
-// слайдер-------------------------------------------------
-
-window.addEventListener('resize', function() {
+// удаление блоков при -------------------------------------------------
+window.addEventListener('resize', function () {
   if (window.innerWidth < 990) {
-    var block = document.querySelector('.Services'); 
-    var block2 = document.querySelector('.Project'); 
+    var block = document.querySelector('.Services');
+    var block2 = document.querySelector('.Project');
 
     if (block && block2) {
       block.remove();
@@ -166,14 +152,15 @@ window.addEventListener('resize', function() {
   }
 });
 
+// развертывание меню на стрелочку -----------------------------------
 btnabout = document.querySelector(".btnabout")
 var aboutText = document.querySelector(".block_slide")
 var aboutTxet = document.querySelector(".aboutTxet")
-btnabout.addEventListener("click", function(){
-  if(    aboutText.style.display === "none"){
+btnabout.addEventListener("click", function () {
+  if (aboutText.style.display === "none") {
     aboutText.style.display = "block"
     aboutTxet.classList.add("active")
-  }else{
+  } else {
     aboutText.style.display = "none"
     aboutTxet.classList.remove("active")
   }
