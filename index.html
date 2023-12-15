@@ -31,9 +31,24 @@
             </div>
 
             <div class="header__burger" id="burgerMenu">
-                <div class="header__burger-line"></div>
-                <div class="header__burger-line"></div>
-                <div class="header__burger-line"></div>
+                <div class="header__burger__inner">
+                   
+                        <div class="header__burger-line"></div>
+                        <div class="header__burger-line"></div>
+                        <div class="header__burger-line"></div>
+                    
+
+                </div>
+                <div class="nav__header_mobl active">
+                    <nav class="nav__header_mobl__inner">
+                        <ul class="nav__list__mob">
+                            <li id="menu1" class="nav__item"><a href="#about">О нас</a></li>
+                            <li id="menu2" class="nav__item"><a href="#services">Услуги</a></li>
+                            <li id="menu3" class="nav__item"><a href="#projects">Проекты</a></li>
+                            <li id="menu4" class="nav__item"><a href="#contact">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
         </div>
@@ -155,7 +170,7 @@
             </div>
         </div>
         <!-- Project -->
-        <div class="Project" >
+        <div class="Project">
             <img src="./assets/images/ui/project.svg" style="position: absolute; right: 0;">
             <img src="./assets/images/ui/program.svg" style="position: relative; top: 150px;">
             <div class="projcet_Program">
@@ -429,34 +444,33 @@
                     <p class="footer__mail"><a>info@rdcenter.ru</a></p>
                     <p class="footer__number" style="position: relative; top: -15px;"><a>8 999 900-99-99</a></p>
                 </div>
-                <div class="footerSvazLine" style="position: relative; top: 50px;"><img src="./assets/images/moble/footerLine.svg"></div>
+                <div class="footerSvazLine" style="position: relative; top: 50px;"><img
+                        src="./assets/images/moble/footerLine.svg"></div>
                 <div class="block_line"><img src="./assets/images/ui/footer__line.svg"></div>
                 <div class="block_form">
                     <div>
-
-                  
-                    <form class="contact__form">
-                        <input class="input" type="text" placeholder="Имя*">
-                        <input class="input" type="text" placeholder="E-mail*">
-                        <textarea style="height: 125px;" class="input" type="text"
-                            placeholder="Расскажите о проекте*"></textarea>
-                        <input onchange="showFileName(this)" class="input__file" type="file"
-                            placeholder="Прикрепите файл" accept=".pdf, .doc, .docx">
-                        <label class="input__file__label" id="input__file__label">Прикрепите файл</label>
-                        <img class="screp" src="./assets/images/ui/screp.svg">
-                    </form>
-                    <div class="block__footer__button">
-                        <button class="submit__button" onclick="SubmitForm()">Отправить</button>
+                        <form class="contact__form">
+                            <input class="input" type="text" placeholder="Имя*">
+                            <input class="input" type="text" placeholder="E-mail*">
+                            <textarea style="height: 125px;" class="input" type="text"
+                                placeholder="Расскажите о проекте*"></textarea>
+                            <input onchange="showFileName(this)" class="input__file" type="file"
+                                placeholder="Прикрепите файл" accept=".pdf, .doc, .docx">
+                            <label class="input__file__label" id="input__file__label">Прикрепите файл</label>
+                            <img class="screp" src="./assets/images/ui/screp.svg">
+                        </form>
+                        <div class="block__footer__button">
+                            <button class="submit__button" onclick="SubmitForm()">Отправить</button>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="block_logoFooter">
                     <img src="./assets/images/logo/footer__logo.svg">
                 </div>
                 <div class="Psbottom">
                     <p class="text">© 2023 ООО Центр исследований и разработки</p>
-                    <p>Город Таганрог</p>
-                    <p>ИНН 6154164546. ОГРН: 1236100005613</p>
+                    <p class="footerSicr">Город Таганрог</p>
+                    <p class="footerSicr"> ИНН 6154164546. ОГРН: 1236100005613</p>
                 </div>
             </div>
 
