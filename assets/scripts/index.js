@@ -47,10 +47,6 @@ function trackScroll() {
 
   var contactModuleHeight = document.getElementById('contact').offsetHeight;
   var pageHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-  console.log(aboutModuleHeight);
-  console.log(servicesModuleHeight);
-  console.log(projectsModuleHeight);
-  console.log(contactModuleHeight);
   if (window.innerWidth > 990) {
     if (scrollPosition < aboutModuleHeight + pageHeight - headerHeight) {
       menu1.style.borderBottom = "1px solid #31D8B0";
@@ -62,23 +58,25 @@ function trackScroll() {
       menu1.style.borderBottom = "none";
       menu3.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
-    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + projectsModuleHeight - headerHeight) {
+    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + projectsModuleHeight ) {
       menu3.style.borderBottom = "1px solid #31D8B0";
       menu1.style.borderBottom = "none";
       menu2.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
-    } else {
-      menu1.style.borderBottom = "none";
-      menu2.style.borderBottom = "none";
-      menu3.style.borderBottom = "none";
-      menu4.style.borderBottom = "1px solid #31D8B0";
     }
+    else if(scrollPosition > 3300){
+       menu1.style.borderBottom = "none";
+       menu2.style.borderBottom = "none";
+       menu3.style.borderBottom = "none";
+       menu4.style.borderBottom = "1px solid #31D8B0";
+     }
     if (scrollPosition <= headerHeight) {
       menu1.style.borderBottom = "none";
       menu2.style.borderBottom = "none";
       menu3.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
     }
+    console.log(scrollPosition);
   } else {
     if (scrollPosition < aboutModuleHeight + 600) {
       menu1.style.borderBottom = "1px solid #31D8B0";

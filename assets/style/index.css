@@ -44,6 +44,7 @@ hr {
     display: block;
     position: relative;
     background-color: #ffffff;
+    overflow: hidden;
 }
 
 /* header */
@@ -273,7 +274,10 @@ ul li {
     text-align: center;
     border: none;
 }
+.button__message:hover{
+    cursor: pointer;
 
+}
 /* Project */
 .Project {
     position: relative;
@@ -569,6 +573,15 @@ textarea::placeholder {
 }
 .ServicesMobleBg{
 display: none;
+}
+.imgMainLine{
+    display: none;
+}
+.footerSvazLine{
+    display: none;
+}
+.titleMainPh{
+    display: none;
 }
 @media(max-width:1266px) {
     .aboutTxet p {
@@ -985,6 +998,7 @@ display: none;
 }
 
 @media(max-width:880px) {
+   
     .About {
         height: auto;
         margin-bottom: 200px;
@@ -1055,9 +1069,9 @@ display: none;
 
     .footer__mail {
         font-size: 24px;
-        position: relative;
-        left: 50px;
-        top: 35px;
+       position: relative;
+       top: 35px;
+        text-align: right;
     }
 
     .block_form {
@@ -1086,6 +1100,29 @@ display: none;
     .block_line {
         display: none;
     }
+    
+    .imgMainLine{
+        display: block;
+        position: absolute;
+        top: 30%;
+        z-index: 10;
+    }
+    .footerSvazLine{
+        display: block;
+    }
+    
+    .block_form{
+       display: flex;
+       justify-content: center;
+       width: 100%!important;
+    }
+   .contact__form{
+    margin-left: -50px;
+   }
+   .block__footer__button{
+    margin-left: -50px;
+   }
+
 }
 
 @media(max-width:790px) {
@@ -1132,21 +1169,87 @@ header{
     top: 10%;
     left: 20px;
 }
+
+.home-background-arrow{
+    display: none;
+}
+
 .home-background-logoGlav{
     position: absolute;
     left: 35px;
     top: 40%;
 
 }
-.imgMainLine{
+.block_form{
+    display: flex;
+    justify-content: right;
+    width: 88%!important;
+    top: 0;
+    margin-right: 25px;
+ }
+ .footer__title{
     display: block;
-    position: absolute;
-    top: 30%;
-    z-index: 10;
+    font-size: 24px;
+ }
+ .footer__subtitle{
+    display: block;
+    font-size: 20px;
+ }
+ .footer__mail{
+    left: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    text-align: left;
+ 
+ }
+ .footer__number{
+    display: block;
+ }
 }
-.home-background-arrow{
-    display: none;
+@media(max-width:690px) {
+    .About{
+        margin-top: 0;
+        position: relative;
+        top: -150px;
+        margin-bottom: 50px;
+    }
+    .AboutLine{
+        display: none;
+    }
+    .peopleAbout{
+        top: -50px;
+    }
+    .footer__subtitle, .footer__title, .footer__number{
+        display: none;
+    }
+    .footer__mail{
+        top: 25px;
+    }
+    .block_form{
+        justify-content: left;
+        top: 100px;
+    }
+    .home-background{
+        width: 80vh;
+    }
+    .home-background-center{
+        right: 0;
+        left: 100px;
+    }
+    .home-background-logoGlav{
+        width: 150px;
+    }
+    .titleMainPc{
+        display: none;
+    }
+    .titleMainPh{
+        display: block;
+    }
+    .imgMainLine{
+        top: 32%;
+    }
 }
-
+@media(max-width:580px){
 
 }

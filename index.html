@@ -41,7 +41,9 @@
     <div class="container">
         <div class="main__page" id="topSite">
 
-            <p>Центр исследований <br>и разработки</p>
+            <p class="titleMainPc">Центр исследований <br>и разработки</p>
+            <p class="titleMainPh">Центр <br>исследований и<br> разработки</p>
+
             <img class="imgMainLine" src="./assets/images/moble/mainLine.svg">
             <img src="./assets/images/background/center.svg" alt="home-background" class="home-background-center">
             <img src="./assets/images/logo/лого главная.svg" alt="home-background" class="home-background-logoGlav">
@@ -50,7 +52,7 @@
         </div>
 
         <div class="About" id="about">
-            <img src="./assets/images/ui/блок о нас.svg">
+            <img class="AboutLine" src="./assets/images/ui/блок о нас.svg">
             <img class="peopleAbout" src="./assets/images/moble/peopleAbout.svg">
             <div class="aboutTxet">
                 <p>Центр исследований и разработки это передовая научно-техническая компания, занимающаяся разработкой
@@ -96,7 +98,7 @@
 
             </div>
             <div class="button__message__block">
-                <button class="button__message">Связаться с нами</button>
+                <a href="#contact"><button class="button__message">Связаться с нами</button></a>
             </div>
 
         </div>
@@ -146,14 +148,14 @@
 
                         </div>
                         <div class="button__message__block">
-                            <button class="button__message">Связаться с нами</button>
+                            <a href="#contact"><button class="button__message">Связаться с нами</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Project -->
-        <div class="Project" id="projects">
+        <div class="Project" >
             <img src="./assets/images/ui/project.svg" style="position: absolute; right: 0;">
             <img src="./assets/images/ui/program.svg" style="position: relative; top: 150px;">
             <div class="projcet_Program">
@@ -212,7 +214,7 @@
                 </div>
 
             </div>
-            <div class="projcet_Apparat">
+            <div class="projcet_Apparat" id="projects">
                 <div class="projcet_Apparat_img">
                     <img src="./assets/images/ui/apparat.svg">
                 </div>
@@ -427,9 +429,12 @@
                     <p class="footer__mail"><a>info@rdcenter.ru</a></p>
                     <p class="footer__number" style="position: relative; top: -15px;"><a>8 999 900-99-99</a></p>
                 </div>
-                <div style="position: relative; top: 50px;"><img src="./assets/images/moble/footerLine.svg"></div>
+                <div class="footerSvazLine" style="position: relative; top: 50px;"><img src="./assets/images/moble/footerLine.svg"></div>
                 <div class="block_line"><img src="./assets/images/ui/footer__line.svg"></div>
                 <div class="block_form">
+                    <div>
+
+                  
                     <form class="contact__form">
                         <input class="input" type="text" placeholder="Имя*">
                         <input class="input" type="text" placeholder="E-mail*">
@@ -443,6 +448,7 @@
                     <div class="block__footer__button">
                         <button class="submit__button" onclick="SubmitForm()">Отправить</button>
                     </div>
+                </div>
                 </div>
                 <div class="block_logoFooter">
                     <img src="./assets/images/logo/footer__logo.svg">
