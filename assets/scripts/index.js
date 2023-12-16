@@ -151,7 +151,7 @@ for (const [key, value] of formData.entries()) {
 }
 
     // Отправляем данные на сервер
-    fetch('./SubmitForm.php', {
+    fetch('http://localhost:8888/assets/scripts/SubmitForm.php', {
       method: 'POST',
       body: formData
     })
