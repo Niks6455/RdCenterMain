@@ -61,16 +61,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     slide.addEventListener("touchend", function(event) {
       var touchDiff = touchStartX - touchEndX;
-      if (touchDiff > 0) {
-        // Свайп влево
+      if (touchDiff > 0 && !event.target.closest("a")) {
+        // Свайп влево и не нажатие на ссылку
         clearInterval(intervalId); // Остановить автоматическое перелистывание
         currentIndex++;
         if (currentIndex >= slides.length) {
           currentIndex = 0;
         }
         showSlide(currentIndex);
-      } else if (touchDiff < 0) {
-        // Свайп вправо
+      } else if (touchDiff < 0 && !event.target.closest("a")) {
+        // Свайп вправо и не нажатие на ссылку
         clearInterval(intervalId); // Остановить автоматическое перелистывание
         currentIndex--;
         if (currentIndex < 0) {
@@ -78,6 +78,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         showSlide(currentIndex);
       }
+    });
+  });
+
+  // Обработчик события для ссылок внутри слайдов
+  slides.forEach(function(slide) {
+    var links = slide.querySelectorAll("a");
+    links.forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.stopPropagation();
+        window.location.href = event.target.href; // Переход по ссылке
+      });
     });
   });
 });

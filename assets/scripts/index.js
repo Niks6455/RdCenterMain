@@ -144,16 +144,16 @@ submit__button.addEventListener("click", () => {
   var FileName = document.querySelector(".input__file__label").textContent;
 
   if (name.value === "") {
-    name.style = "box-shadow: 0 0 10px 5px red";
+    name.style = "box-shadow: 0 0 10px 3px red";
   }
   if (message.value === "") {
-    message.style = "box-shadow: 0 0 10px 5px red";
+    message.style = "box-shadow: 0 0 10px 3px red";
   }
   if (!re.test(email.value)) {
-    email.style = "box-shadow: 0 0 10px 5px red";
+    email.style = "box-shadow: 0 0 10px 3px red";
   }
   if (FileName === "Прикрепите файл") {
-    document.querySelector(".input__file").style = "box-shadow: 0 0 10px 5px red";
+    document.querySelector(".input__file").style = "box-shadow: 0 0 10px 3px red";
   }
   if (name.value != "" && message.value != "" && FileName != "Прикрепите файл" && re.test(email.value)) {
     console.log("Отправил");
