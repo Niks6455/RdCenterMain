@@ -448,18 +448,18 @@
                 <div class="block_line"><img src="./assets/images/ui/footer__line.svg"></div>
                 <div class="block_form">
                     <div>
-                        <form class="contact__form">
-                            <input class="input" type="text" placeholder="Имя*">
-                            <input class="input" type="text" placeholder="E-mail*">
+                        <form enctype="multipart/form-data" class="contact__form" method="POST" action="./assets/scripts/SubmitForm.php" >
+                            <input class="input" type="text" placeholder="Имя*" name="name">
+                            <input class="input" type="text" placeholder="E-mail*" name="e-mail">
                             <textarea style="height: 125px;" class="input" type="text"
-                                placeholder="Расскажите о проекте*"></textarea>
-                            <input onchange="showFileName(this)" class="input__file" type="file"
+                                placeholder="Расскажите о проекте*" name="textArea"></textarea>
+                            <input onchange="showFileName(this)" name="file" class="input__file" type="file"
                                 placeholder="Прикрепите файл" accept=".pdf, .doc, .docx">
                             <label class="input__file__label" id="input__file__label">Прикрепите файл</label>
                             <img class="screp" src="./assets/images/ui/screp.svg">
                         </form>
                         <div class="block__footer__button">
-                            <button class="submit__button" onclick="SubmitForm()">Отправить</button>
+                            <button class="submit__button" type="submit">Отправить</button>
                         </div>
                     </div>
                 </div>

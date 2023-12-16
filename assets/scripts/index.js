@@ -57,18 +57,18 @@ function trackScroll() {
       menu1.style.borderBottom = "none";
       menu3.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
-    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + projectsModuleHeight ) {
+    } else if (scrollPosition < aboutModuleHeight + servicesModuleHeight + projectsModuleHeight) {
       menu3.style.borderBottom = "1px solid #31D8B0";
       menu1.style.borderBottom = "none";
       menu2.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
     }
-    else if(scrollPosition > 3300){
-       menu1.style.borderBottom = "none";
-       menu2.style.borderBottom = "none";
-       menu3.style.borderBottom = "none";
-       menu4.style.borderBottom = "1px solid #31D8B0";
-     }
+    else if (scrollPosition > 3300) {
+      menu1.style.borderBottom = "none";
+      menu2.style.borderBottom = "none";
+      menu3.style.borderBottom = "none";
+      menu4.style.borderBottom = "1px solid #31D8B0";
+    }
     if (scrollPosition <= headerHeight) {
       menu1.style.borderBottom = "none";
       menu2.style.borderBottom = "none";
@@ -111,36 +111,74 @@ window.addEventListener('scroll', trackScroll);
 
 // функционал валидации -------------------------------------------------------------------
 var ErrorForm = true;
+var submit__button = document.querySelector(".submit__button");
+var re = /\S+@\S+\.\S+/;
 
-function CheckErrorForm() {
-  // Проверяем, заполнены ли все поля формы
+submit__button.addEventListener("click", () => {
   var name = document.querySelector('.contact__form input[type="text"][placeholder="Имя*"]').value;
   var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]').value;
   var message = document.querySelector('.contact__form textarea').value;
   var FileName = document.querySelector(".input__file__label").textContent;
-  var re = /\S+@\S+\.\S+/;
-  if (name && email && message && FileName != "Прикрепите файл" && re.test(email)) {
-    ErrorForm = false;
-  } else {
-    ErrorForm = true;
-  }
-}
 
-function SubmitForm() {
-  CheckErrorForm(); // Вызываем функцию для проверки формы перед проверкой значения ErrorForm
-  console.log(ErrorForm);
-  if (!ErrorForm) {
+  if (name != "" && message != "" && FileName != "Прикрепите файл" && re.test(email)) {
     console.log("Отправил");
+    SubmitForm();
   } else {
     console.log("неа");
   }
+})
+
+
+// Получаем элементы формы
+function SubmitForm(){
+  const form = document.querySelector('.contact__form');
+  const nameInput = form.querySelector('input[placeholder="Имя*"]');
+  const emailInput = form.querySelector('input[placeholder="E-mail*"]');
+  const messageInput = form.querySelector('textarea');
+  const fileInput = form.querySelector('input[type="file"]');
+  
+  // Обработчик события отправки формы
+
+    // Создаем объект FormData для сбора данных формы
+    const formData = new FormData();
+    formData.append('name', nameInput.value);
+    formData.append('email', emailInput.value);
+    formData.append('message', messageInput.value);
+    formData.append('file', fileInput.files[0]);
+   // Получение всех пар ключ-значение
+for (const [key, value] of formData.entries()) {
+  console.log(key, value);
 }
+
+    // Отправляем данные на сервер
+    fetch('./SubmitForm.php', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => {
+        if (response.ok) {
+          // Письмо успешно отправлено
+          alert('Письмо успешно отправлено!');
+          form.reset(); // Очищаем форму
+        } else {
+          // Возникла ошибка при отправке письма
+          alert('Ошибка при отправке письма.');
+        }
+      })
+      .catch(error => {
+        console.error('Произошла ошибка:', error);
+        alert('Произошла ошибка при отправке письма.');
+      });
+  }
+
+
+
+
 // удаление блоков при -------------------------------------------------
 window.addEventListener('resize', function () {
   if (window.innerWidth < 990) {
     var block = document.querySelector('.Services');
     var block2 = document.querySelector('.Project');
-
     if (block && block2) {
       block.remove();
       block2.remove();
