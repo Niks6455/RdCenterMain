@@ -6,7 +6,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const targetElement = document.querySelector(href);
     if (targetElement) {
       const offset = targetElement.offsetTop;
-      console.log(offset);
       window.scrollTo({
         top: offset,
         behavior: 'smooth'
@@ -76,7 +75,6 @@ function trackScroll() {
       menu3.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
     }
-    console.log(scrollPosition);
   } else {
     if (scrollPosition < aboutModuleHeight + 600) {
       menu1.style.borderBottom = "1px solid #31D8B0";
