@@ -113,14 +113,49 @@ window.addEventListener('scroll', trackScroll);
 var ErrorForm = true;
 var submit__button = document.querySelector(".submit__button");
 var re = /\S+@\S+\.\S+/;
+const form = document.querySelector('.contact__form');
 
+form.addEventListener("input", () => {
+  var name = document.querySelector('.contact__form input[type="text"][placeholder="Имя*"]');
+  var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]');
+  var message = document.querySelector('.contact__form textarea');
+
+  if (name.value != "") {
+    name.style = "box-shadow: none";
+  }
+  if (message.value != "") {
+    message.style = "box-shadow: none";
+  }
+  if (re.test(email.value)) {
+    email.style = "box-shadow: none";
+  }
+
+})
+document.querySelector('input[type="file"]').addEventListener('change', function (event) {
+  var FileName = document.querySelector(".input__file__label").textContent;
+  if (FileName != "Прикрепите файл") {
+    document.querySelector(".input__file").style = "box-shadow: none";
+  }
+});
 submit__button.addEventListener("click", () => {
-  var name = document.querySelector('.contact__form input[type="text"][placeholder="Имя*"]').value;
-  var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]').value;
-  var message = document.querySelector('.contact__form textarea').value;
+  var name = document.querySelector('.contact__form input[type="text"][placeholder="Имя*"]');
+  var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]');
+  var message = document.querySelector('.contact__form textarea');
   var FileName = document.querySelector(".input__file__label").textContent;
 
-  if (name != "" && message != "" && FileName != "Прикрепите файл" && re.test(email)) {
+  if (name.value === "") {
+    name.style = "box-shadow: 0 0 10px 5px red";
+  }
+  if (message.value === "") {
+    message.style = "box-shadow: 0 0 10px 5px red";
+  }
+  if (!re.test(email.value)) {
+    email.style = "box-shadow: 0 0 10px 5px red";
+  }
+  if (FileName === "Прикрепите файл") {
+    document.querySelector(".input__file").style = "box-shadow: 0 0 10px 5px red";
+  }
+  if (name.value != "" && message.value != "" && FileName != "Прикрепите файл" && re.test(email.value)) {
     console.log("Отправил");
     SubmitForm();
   } else {
@@ -130,46 +165,41 @@ submit__button.addEventListener("click", () => {
 
 
 // Получаем элементы формы
-function SubmitForm(){
+function SubmitForm() {
   const form = document.querySelector('.contact__form');
   const nameInput = form.querySelector('input[placeholder="Имя*"]');
   const emailInput = form.querySelector('input[placeholder="E-mail*"]');
   const messageInput = form.querySelector('textarea');
   const fileInput = form.querySelector('input[type="file"]');
-  
+
   // Обработчик события отправки формы
+  // Создаем объект FormData для сбора данных формы
+  const formData = new FormData();
+  formData.append('name', nameInput.value);
+  formData.append('email', emailInput.value);
+  formData.append('message', messageInput.value);
+  formData.append('file', fileInput.files[0]);
 
-    // Создаем объект FormData для сбора данных формы
-    const formData = new FormData();
-    formData.append('name', nameInput.value);
-    formData.append('email', emailInput.value);
-    formData.append('message', messageInput.value);
-    formData.append('file', fileInput.files[0]);
-   // Получение всех пар ключ-значение
-for (const [key, value] of formData.entries()) {
-  console.log(key, value);
-}
-
-    // Отправляем данные на сервер
-    fetch('http://localhost:8888/assets/scripts/SubmitForm.php', {
-      method: 'POST',
-      body: formData
+  // Отправляем данные на сервер
+  fetch('http://localhost:8888/assets/scripts/SubmitForm.php', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => {
+      if (response.ok) {
+        // Письмо успешно отправлено
+        alert('Письмо успешно отправлено!');
+        form.reset(); // Очищаем форму
+      } else {
+        // Возникла ошибка при отправке письма
+        alert('Ошибка при отправке письма.');
+      }
     })
-      .then(response => {
-        if (response.ok) {
-          // Письмо успешно отправлено
-          alert('Письмо успешно отправлено!');
-          form.reset(); // Очищаем форму
-        } else {
-          // Возникла ошибка при отправке письма
-          alert('Ошибка при отправке письма.');
-        }
-      })
-      .catch(error => {
-        console.error('Произошла ошибка:', error);
-        alert('Произошла ошибка при отправке письма.');
-      });
-  }
+    .catch(error => {
+      console.error('Произошла ошибка:', error);
+      alert('Произошла ошибка при отправке письма.');
+    });
+}
 
 
 

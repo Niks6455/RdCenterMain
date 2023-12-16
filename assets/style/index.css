@@ -108,7 +108,6 @@ ul li {
     position: absolute;
     left: 0;
     right: 0;
-
     bottom: 100px;
     margin: 0 auto;
     width: 800px;
@@ -129,13 +128,13 @@ ul li {
     z-index: 10;
     position: absolute;
     left: 150px;
-    top: 300px;
+    top: 265px;
 }
 
 .home-background-logoGlav {
     position: absolute;
     right: 150px;
-    top: 265px;
+    top: 230px;
     z-index: 11;
 
 }
@@ -243,7 +242,9 @@ ul li {
     text-align: center;
     z-index: 10;
 }
-
+.Services__inner__block2 p{
+    top: 40%;
+}
 .Services__inner__block1 img,
 .Services__inner__block2 img,
 .Services__inner__block3 img,
@@ -438,9 +439,15 @@ footer .container {
     left: 0;
     bottom: 20px;
     padding-left: 15px;
+  
 }
-
+.block_logoFooter img{
+    width: 110px;
+}
 /* block_form */
+.Error_message{
+    display: none;
+}
 .block_form {
     position: absolute;
     left: 40%;
@@ -473,8 +480,12 @@ footer .container {
     color: #ffffff;
     width: 150px;
     text-align: center;
+    transition: 0.15s linear all;
 }
-
+.submit__button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
 .block__footer__button {
     margin-top: 5px;
     display: flex;
@@ -484,6 +495,7 @@ footer .container {
     height: 50px;
     position: relative;
     top: -35px;
+  left: 10px;
 }
 
 input {
@@ -499,6 +511,7 @@ textarea {
     padding: 10px 0px 0px 10px;
     resize: none;
     width: 400px !important;
+    height: 125px!important;
 }
 
 textarea::placeholder {
@@ -608,7 +621,7 @@ textarea::placeholder {
     .Services__inner__block3 p,
     .Services__inner__block4 p {
 
-        top: 65%;
+        top: 75%;
         font-size: 22px;
         max-width: 350px;
         position: relative;
