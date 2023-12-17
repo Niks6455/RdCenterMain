@@ -40,12 +40,13 @@ function trackScroll() {
   }
   else {
     var aboutModuleHeight = document.getElementById('about').offsetHeight;
-    var servicesModuleHeight = document.getElementById('services').offsetHeight;
+    var servicesModuleHeight = document.getElementById('services').offsetHeight+600;
     var projectsModuleHeight = document.getElementById('projects').offsetHeight;
   }
 
   var contactModuleHeight = document.getElementById('contact').offsetHeight;
   var pageHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+  
   if (window.innerWidth > 990) {
     if (scrollPosition < aboutModuleHeight + pageHeight - headerHeight) {
       menu1.style.borderBottom = "1px solid #31D8B0";
@@ -63,7 +64,7 @@ function trackScroll() {
       menu2.style.borderBottom = "none";
       menu4.style.borderBottom = "none";
     }
-    else if (scrollPosition > 3300) {
+    else if (scrollPosition > 3600) {
       menu1.style.borderBottom = "none";
       menu2.style.borderBottom = "none";
       menu3.style.borderBottom = "none";
@@ -163,6 +164,7 @@ submit__button.addEventListener("click", () => {
   }
 })
 
+// Отправка формы -------------------------------------------------
 
 // Получаем элементы формы
 function SubmitForm() {
@@ -189,7 +191,7 @@ function SubmitForm() {
       if (response.ok) {
         // Письмо успешно отправлено
         alert('Письмо успешно отправлено!');
-        form.reset(); // Очищаем форму
+        form.reset(); 
       } else {
         // Возникла ошибка при отправке письма
         alert('Ошибка при отправке письма.');
@@ -229,3 +231,15 @@ btnabout.addEventListener("click", function () {
     aboutTxet.classList.remove("active")
   }
 })
+
+//при навидении скрепка становится зеленая -----------------------------------
+var inputElement = document.querySelector(".input__file");
+var imageElement = document.querySelector(".screp");
+var hoverImageUrl = "./assets/images/ui/screpGreen.svg";
+inputElement.addEventListener("mouseover", function() {
+    imageElement.src = hoverImageUrl;
+});
+
+inputElement.addEventListener("mouseout", function() {
+  imageElement.src = "./assets/images/ui/screp.svg";
+});

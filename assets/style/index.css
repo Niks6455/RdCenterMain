@@ -44,7 +44,6 @@ hr {
     display: block;
     position: relative;
     background-color: #ffffff;
-    overflow: hidden;
 }
 
 /* header */
@@ -174,6 +173,7 @@ ul li {
 /* services */
 .Services {
     position: relative;
+   
 }
 
 .bg__service {
@@ -183,7 +183,24 @@ ul li {
     z-index: 0;
     max-width: 100%;
 }
-
+.bg__service__black__left{
+    width: 100%;
+    position:   absolute;
+    left: -1360px;
+    top: 255px;
+    height: 885px;
+    border: #000;
+    background-color: rgb(0, 0, 0);
+}
+.bg__service__black__right{
+    width: 100%;
+    position: absolute;
+    right: -1360px;
+    top: 40px;
+    height: 1087px;
+    border: #000;
+    background-color: rgb(0, 0, 0);
+}
 .Services__inner {
     position: relative;
 }
@@ -242,8 +259,12 @@ ul li {
     text-align: center;
     z-index: 10;
 }
-.Services__inner__block2 p{
+.Services__inner__block2 p,
+.Services__inner__block1 p{
     top: 40%;
+}
+.Services__inner__block2 p{
+    right: -45px;
 }
 .Services__inner__block1 img,
 .Services__inner__block2 img,
@@ -542,7 +563,7 @@ textarea::placeholder {
 
 .input__file__label {
     position: relative;
-    top: -35px;
+    top: -37px;
     z-index: 10;
     color: #000000;
     left: 30px;
@@ -1159,7 +1180,14 @@ textarea::placeholder {
     }
 
     .block__footer__button {
-        margin-left: -50px;
+    margin-left: -25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    }
+    .submit__button{
+    left: 0;
     }
 
 }
@@ -1170,7 +1198,9 @@ textarea::placeholder {
         left: 0;
         top: 5px;
     }
-
+    .container{
+        overflow: hidden;
+    }
     .header__burger {
         display: block;
     }
