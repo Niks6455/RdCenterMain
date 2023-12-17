@@ -81,14 +81,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Обработчик события для ссылок внутри слайдов
-  slides.forEach(function(slide) {
-    var links = slide.querySelectorAll("a");
-    links.forEach(function(link) {
-      link.addEventListener("click", function(event) {
-        event.stopPropagation();
-        window.location.href = event.target.href; // Переход по ссылке
-      });
-    });
-  });
+  
 });

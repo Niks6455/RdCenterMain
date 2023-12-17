@@ -522,6 +522,7 @@ input {
     padding: 10px;
     padding-left: 20px;
     font-size: 16px;
+    padding-top: 6px;
 }
 
 input::placeholder {
@@ -632,7 +633,9 @@ textarea::placeholder {
 .titleMainPh {
     display: none;
 }
-
+.block_link_projMoble a{
+    z-index: 2;
+}
 @media(max-width:1266px) {
     .aboutTxet p {
         font-size: 22px;
@@ -1455,8 +1458,12 @@ textarea::placeholder {
         letter-spacing: 0em;
         text-align: left;
         margin-left: 0;
+        max-width: 300px;
     }
-
+    .mobRel{
+        position: relative;
+        bottom: -10px;
+    }
     .center {
         height: 500px;
         padding-top: 60px;
@@ -1545,7 +1552,7 @@ textarea::placeholder {
     }
 
     .screp {
-        bottom: 60px;
+        bottom: 62px;
         right: 5px;
     }
 
