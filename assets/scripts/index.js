@@ -111,16 +111,14 @@ window.addEventListener('scroll', trackScroll);
 
 
 // функционал валидации -------------------------------------------------------------------
-var ErrorForm = true;
 var submit__button = document.querySelector(".submit__button");
 var re = /\S+@\S+\.\S+/;
 const form = document.querySelector('.contact__form');
 
 form.addEventListener("input", () => {
-  var name = document.querySelector('.contact__form input[type="text"][placeholder="Имя*"]');
-  var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]');
-  var message = document.querySelector('.contact__form textarea');
-
+    var name = document.querySelector('#namePole');
+    var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]');
+    var message = document.querySelector('.contact__form textarea');
   if (name.value != "") {
     name.style = "box-shadow: none";
   }
@@ -130,19 +128,20 @@ form.addEventListener("input", () => {
   if (re.test(email.value)) {
     email.style = "box-shadow: none";
   }
-
 })
+
 document.querySelector('input[type="file"]').addEventListener('change', function (event) {
-  var FileName = document.querySelector(".input__file__label").textContent;
-  if (FileName != "Прикрепите файл") {
+  var FileName = document.querySelector(".input__file__label");
+  if (FileName.textContent != "Прикрепите файл") {
     document.querySelector(".input__file").style = "box-shadow: none";
   }
 });
+
 submit__button.addEventListener("click", () => {
-  var name = document.querySelector('.contact__form input[type="text"][placeholder="Имя*"]');
-  var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]');
-  var message = document.querySelector('.contact__form textarea');
-  var FileName = document.querySelector(".input__file__label");
+    var name = document.querySelector('#namePole');
+    var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]');
+    var message = document.querySelector('.contact__form textarea');
+    var FileName = document.querySelector(".input__file__label");
 
   if (name.value === "") {
     name.style = "box-shadow: 0 0 10px 3px red";
@@ -153,25 +152,20 @@ submit__button.addEventListener("click", () => {
   if (!re.test(email.value)) {
     email.style = "box-shadow: 0 0 10px 3px red";
   }
+ 
   if (FileName.textContent === "Прикрепите файл") {
     document.querySelector(".input__file").style = "box-shadow: 0 0 10px 3px red";
   }
-  {
+  if(name.value != "" && message.value != "" && re.test(email.value) && FileName.textContent != "Прикрепите файл" ) {
     let captcha = grecaptcha.getResponse();
     if(!captcha.length){
-
+        document.querySelector("#recaptchaError").textContent = "Вы не прошли проверку капчей"
     }else{
-      
+        SubmitForm();
     }
-    console.log("Отправил");
-    //SubmitForm();
-    FileName.textContent = "Прикрепите файл"
-    FileName.style.color = "#EFEFEF"
+  
   } 
 })
-
-// Отправка формы -------------------------------------------------
-
 
 // Получаем элементы формы
 function SubmitForm() {
@@ -188,9 +182,9 @@ function SubmitForm() {
   formData.append('email', emailInput.value);
   formData.append('message', messageInput.value);
   formData.append('file', fileInput.files[0]);
-
+    
   // Отправляем данные на сервер
-  fetch('http://localhost:8888/assets/scripts/SubmitForm.php', {
+  fetch('https://rdcenter.ru/assets/scripts/SubmitForm.php', {
     method: 'POST',
     body: formData
   })
@@ -199,6 +193,10 @@ function SubmitForm() {
         // Письмо успешно отправлено
         alert('Письмо успешно отправлено!');
         form.reset(); 
+        grecaptcha.reset();
+        document.querySelector("#recaptchaError").textContent = ""
+        document.querySelector(".input__file__label").textContent = "Прикрепите файл"
+        document.querySelector(".input__file__label").style.color = "#b0b0b0"
       } else {
         // Возникла ошибка при отправке письма
         alert('Ошибка при отправке письма.');
@@ -209,6 +207,9 @@ function SubmitForm() {
       alert('Произошла ошибка при отправке письма.');
     });
 }
+
+// Отправка формы -------------------------------------------------
+
 
 
 

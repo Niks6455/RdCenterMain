@@ -8,7 +8,7 @@ body {
     font-size: 15px;
     line-height: 1.6;
     color: #FFFFFF;
-
+    overflow-x: hidden;
 }
 
 *,
@@ -177,6 +177,7 @@ ul li {
 }
 
 .bg__service {
+    
     position: relative;
     left: 0;
     top: -115px;
@@ -184,18 +185,18 @@ ul li {
     max-width: 100%;
 }
 .bg__service__black__left{
-    width: 100%;
+    width: 3000px;
     position:   absolute;
-    left: -1360px;
+    left: -2999px;
     top: 255px;
     height: 885px;
     border: #000;
     background-color: rgb(0, 0, 0);
 }
 .bg__service__black__right{
-    width: 100%;
+    width: 3000px;
     position: absolute;
-    right: -1360px;
+    right: -2999px;
     top: 40px;
     height: 1087px;
     border: #000;
@@ -204,7 +205,6 @@ ul li {
 .Services__inner {
     position: relative;
 }
-
 .Services__inner__block1 {
     z-index: 10;
     position: absolute;
@@ -281,7 +281,9 @@ ul li {
     position: relative;
     top: -300px;
 }
-
+.button__message__block a{
+    color:#000;
+}
 .button__message {
     width: 290px;
     height: 53px;
@@ -295,6 +297,7 @@ ul li {
     letter-spacing: 0em;
     text-align: center;
     border: none;
+    color:#000000;
 }
 
 .button__message:hover {
@@ -507,8 +510,6 @@ footer .container {
     cursor: pointer;
 }
 .block__footer__button {
-    margin-top: 5px;
-    display: flex;
     justify-content: center;
     width: 400px;
     align-items: center;
@@ -516,8 +517,13 @@ footer .container {
     position: relative;
     top: -35px;
   left: 10px;
+  display:block;
 }
-
+.submit__button__inner{
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
 input {
     padding: 10px;
     padding-left: 20px;
@@ -636,12 +642,29 @@ textarea::placeholder {
 .block_link_projMoble a{
     z-index: 2;
 }
+.text-danger{
+    text-align:center;
+    position:relative;
+    margin-bottom:5px;
+    top:-5px
+}
+.captcha__block{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin:5px 0px 10px 0px;
+}
 @media(max-width:1266px) {
+    .container{
+        overflow:hidden;
+    }
     .aboutTxet p {
         font-size: 22px;
 
     }
-
+    .text, .footerSicr{
+        margin-bottom:-10px;
+    }
     .main__page p {
         width: 450px;
         font-size: 42px;
@@ -690,6 +713,10 @@ textarea::placeholder {
     form {
         position: relative;
         left: 50px;
+    }
+    .captcha__block{
+        position:relative;
+        left:50px;
     }
 
     .submit__button {
@@ -1047,7 +1074,9 @@ textarea::placeholder {
     .block__footer__button {
         width: 300px;
     }
-
+    .captcha__block{
+        left:38px;
+    }
     form {
         left: 35px;
     }
@@ -1130,15 +1159,17 @@ textarea::placeholder {
     .footer__mail {
         font-size: 24px;
         position: relative;
-        top: 35px;
+        top: 0px;
         text-align: right;
     }
-
+.block_text{
+    top: 0px;
+}
     .block_form {
         position: relative;
         left: 20px;
         bottom: 0;
-        top: 140px;
+        top: 0px;
         right: 0;
     }
 
@@ -1183,19 +1214,29 @@ textarea::placeholder {
     }
 
     .block__footer__button {
-    margin-left: -25px;
+    margin-left: -10px;
     align-items: center;
-    display: flex;
+   
     justify-content: center;
     width: 300px;
     }
     .submit__button{
     left: 0;
     }
+     .footer__inner,
+    footer {
+        height: 680px;
+    }
+    .captcha__block{
+        left:0px;
+    }
 
 }
 
 @media(max-width:790px) {
+    .block_text{
+    top: 125px;
+}
     .header__logo {
         position: absolute;
         left: 0;
@@ -1332,7 +1373,7 @@ textarea::placeholder {
     .block_form {
         display: flex;
         justify-content: right;
-        width: 88% !important;
+          width:95%!important;
         top: 0;
         margin-right: 25px;
     }
@@ -1359,6 +1400,7 @@ textarea::placeholder {
     .footer__number {
         display: block;
     }
+   
 }
 
 @media(max-width:690px) {
@@ -1417,6 +1459,73 @@ textarea::placeholder {
     .imgMainLine {
         margin-top: 25px;
     }
+   
+
+    .footer__mail {
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .input,
+    .input__file {
+        height: 35px;
+        width: 256px;
+        margin: 8px 0;
+    }
+
+    .input::placeholder {
+        font-family: Raleway;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+
+    .input__file {
+        margin: 8px 0;
+        left: 0;
+        top: -5px;
+        padding: 0;
+    }
+
+    .input__file__label {
+        margin-left: -10px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+
+    }
+
+    .screp {
+        bottom: 62px;
+        right: 5px;
+    }
+
+    textarea {
+        height: 100px !important;
+    }
+
+    .block_logoFooter img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .block_form {
+        top: 85px;
+        margin-left: 20px;
+    }
+    .captcha__block{
+        margin-top: -5px;
+        left:-12px;
+    }
 }
 
 @media(max-width:580px) {
@@ -1424,7 +1533,7 @@ textarea::placeholder {
         height: auto;
         top: 300px;
     }
-
+   
     .home-background-center {
         left: 25px;
         height: 125px;
@@ -1496,83 +1605,13 @@ textarea::placeholder {
         margin-bottom: -125px;
     }
 
-    .text {
+    .text,.footerSicr {
         font-size: 9px;
         font-weight: 400;
-        line-height: 11px;
+       
         letter-spacing: 0em;
         text-align: left;
-    }
-
-    .footer__inner,
-    footer {
-        height: 580px;
-    }
-
-    .footerSicr {
-        display: none;
-    }
-
-    .footer__mail {
-        font-family: Inter;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 15px;
-        letter-spacing: 0em;
-        text-align: left;
-        margin-left: 10px;
-    }
-
-    .input,
-    .input__file {
-        height: 35px;
-        width: 256px;
-        margin: 8px 0;
-    }
-
-    .input::placeholder {
-        font-family: Raleway;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        letter-spacing: 0em;
-        text-align: left;
-
-    }
-
-    .input__file {
-        margin: 8px 0;
-        left: 0;
-        top: -5px;
-        padding: 0;
-    }
-
-    .input__file__label {
-        margin-left: -10px;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        letter-spacing: 0em;
-
-    }
-
-    .screp {
-        bottom: 62px;
-        right: 5px;
-    }
-
-    textarea {
-        height: 100px !important;
-    }
-
-    .block_logoFooter img {
-        width: 80px;
-        height: 60px;
-    }
-
-    .block_form {
-        top: 85px;
-        margin-left: 20px;
+        color:#ffffff;
     }
 
     .header__logo img {

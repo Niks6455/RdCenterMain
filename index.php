@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/plugins/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./assets/plugins/slick-1.8.1/slick/slick-theme.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
     <title>R&D Center</title>
 </head>
 
@@ -179,11 +182,11 @@
                 <div class="block__prog__program__inner">
                     <div class="block_img_proj">
                         <a href="https://play.google.com/store/apps/details?id=com.sfedu.crafsed.taganrogdefence&pli=1"
-                            target="_blank"><img src="./assets/images/ui/project/конь.svg"></a>
+                            target="_blank"><img src="./assets/images/ui/project/конь.svg">
                     </div>
                     <div class="block_text_proj">
                         <p>Фестиваль “Оборона Таганрога”</p>
-                    </div>
+                    </div></a>
                     <img style="position: absolute; bottom: 30px; right: 0;" src="./assets/images/ui/project/line.svg">
                     <div class="block_link_proj" style="position: absolute; bottom: -20px;">
                         <a href="https://play.google.com/store/apps/details?id=com.sfedu.crafsed.taganrogdefence&pli=1"
@@ -197,11 +200,11 @@
                     <div class="block_img_proj">
                         <a href="https://apps.apple.com/ru/app/амброзия/id1620858412?l=en" target="_blank"><img
                                 style="position: relative; left: -20px;"
-                                src="./assets/images/ui/project/амброзия.svg"></a>
+                                src="./assets/images/ui/project/амброзия.svg">
                     </div>
                     <div class="block_text_proj">
                         <p>Амброзия</p>
-                    </div>
+                    </div></a>
                     <img style="position: absolute; bottom: 30px; right: 0;" src="./assets/images/ui/project/line.svg">
                     <div class="block_link_proj" style="position: absolute;
                      bottom: -50px;">
@@ -218,11 +221,11 @@
                 <div class="block__prog__program__inner block__goTop">
                     <div class="block_img_proj">
                         <a href="https://биржапрактик.рф/" target="_blank"><img
-                                src="./assets/images/ui/project/биржа.svg"></a>
+                                src="./assets/images/ui/project/биржа.svg">
                     </div>
                     <div class="block_text_proj">
                         <p>Биржа практик</p>
-                    </div>
+                    </div></a>
                     <img style="position: absolute; bottom: 10px; right: 0;" src="./assets/images/ui/project/line.svg">
                     <div class="block_link_proj">
                         <a href="https://биржапрактик.рф/" target="_blank" style="position: relative; bottom: -20px;">
@@ -300,10 +303,10 @@
 
                     <div class="slide ">
                         <div class="slide__inner">
-                            <img src="./assets/images/ui/project/конь.svg">
+                           <a href="https://play.google.com/store/apps/details?id=com.sfedu.crafsed.taganrogdefence&pli=1" target="_blank"><img src="./assets/images/ui/project/конь.svg"></a> 
                             <div class="textmob">
                                 <div class="block_text_projMoble">
-                                    <div class="nameProj">
+                                   <div class="nameProj">
                                         <p>Фестиваль “Оборона Таганрога”</p>
                                     </div>
                                     <div class="block_link_projMoble">
@@ -321,7 +324,7 @@
 
                     <div class="slide ">
                         <div class="slide__inner">
-                            <img src="./assets/images/ui/project/амброзия.svg">
+                            <a href="https://apps.apple.com/ru/app/амброзия/id1620858412?l=en" target="_blank"><img src="./assets/images/ui/project/амброзия.svg"></a>
                             <div class="textmob">
                                 <div class="block_text_projMoble">
                                     <div class="nameProj">
@@ -350,11 +353,11 @@
 
                     <div class="slide ">
                         <div class="slide__inner">
-                            <img src="./assets/images/ui/project/биржа.svg">
+                           <a href="https://биржапрактик.рф/" target="_blank"> <img src="./assets/images/ui/project/биржа.svg"></a>
                             <div class="textmob">
                                 <div class="block_text_projMoble">
-                                    <div class="nameProj">
-                                        <p>Биржа практик</p>
+                                     <div class="nameProj">
+                                      <p>Биржа практик</p>
                                     </div>
                                     <div class="block_link_projMoble">
                                         <img style="position: absolute; right: 25px;"
@@ -445,26 +448,33 @@
                     <p class="footer__subtitle">Мы свяжемся с вами на следующий<br> рабочий день и проконсультируем<br>
                         по всем вопросам </p>
                     <p class="footer__mail" style="position: relative; bottom: -10px;"><a>info@rdcenter.ru</a></p>
-                    <p class="footer__number" style="position: relative; top: -10px;"><a>8 999 900-99-99</a></p>
+                    <p class="footer__number" style="position: relative; top: -10px;"><a>8 951 846-55-31</a></p>
                 </div>
                 <div class="footerSvazLine" style="position: relative; top: 50px;"><img
                         src="./assets/images/moble/footerLine.svg"></div>
                 <div class="block_line"><img src="./assets/images/ui/footer__line.svg"></div>
                 <div class="block_form">
                     <div>
-                        <form enctype="multipart/form-data" class="contact__form" method="POST" action="./assets/scripts/SubmitForm.php" >
+                        <form enctype="multipart/form-data" class="contact__form" method="post" action="SubmitForm.php" >
                             <p class="Error_message"></p>
-                            <input class="input" type="text" placeholder="Имя*" name="name">
-                            <input class="input" type="text" placeholder="E-mail*" name="e-mail">
+                            <input class="input" type="text" placeholder="Имя*" name="name" id="namePole">
+                            <input class="input" type="text" placeholder="E-mail*" name="email">
                             <textarea class="input" type="text"
-                                placeholder="Расскажите о проекте*" name="textArea"></textarea>
+                                placeholder="Расскажите о проекте*" name="message"></textarea>
                             <input onchange="showFileName(this)" name="file" class="input__file" type="file"
                                 placeholder="Прикрепите файл" accept=".pdf, .doc, .docx">
                             <label class="input__file__label" id="input__file__label">Прикрепите файл</label>
                             <img class="screp" src="./assets/images/ui/screp.svg">
                         </form>
                         <div class="block__footer__button">
-                            <button class="submit__button" type="submit">Отправить</button>
+                            <div class="captcha__block">
+                                <div  class="g-recaptcha" data-sitekey = "6LdrGDUpAAAAAJVYyjPErvLtCxWm1lDFGazVfnSv"></div>
+                            </div>
+                            <div class="text-danger" id="recaptchaError"></div>
+                            <div class="submit__button__inner">
+                                <button class="submit__button" type="submit"  data-callback='onSubmit' >Отправить</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -485,6 +495,6 @@
 <script src="./assets/scripts/slider.js?v=<?php echo rand(0, 900);?>"></script>
 <script src="./assets/scripts/boorger.js?v=<?php echo rand(0, 900);?>"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
 
 </html>
