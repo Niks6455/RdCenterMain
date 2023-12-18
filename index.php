@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Центр исследований и разработки - ковчег инноваций, где гений и творчество соединяются. Создаем прогрессивные программные и аппаратные решения, объединяя науку и технологии. Мастерство наших разработчиков преображает идеи в реальность. ">
+    <meta name="keywords" content="исследования и разработка, инновации, прогрессивные решения, веб-приложения, мобильные приложения, аппаратные разработки, интернет вещей, виртуальная реальность, дополненная реальность, цифровая трансформация, эффективные технологии">
+    <link rel="shortcut icon" href="./assets/images/logo/logo.svg">
+    <link rel="stylesheet" href="./assets/style/index.css?v=<?php echo rand(0, 900);?>">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/slick-1.8.1/slick/slick-theme.css" />
+    <title>R&D Center</title>
+</head>
+
+<body>
+    <img src="./assets/images/background/главная.svg" alt="home-background" class="home-background">
+    <header class="header">
+        <div class="header_content_inner">
+            <div class="header__logo">
+                <a href="#topSite"><img src="./assets/images/logo/logo.svg" alt="header-icon"></a>
+            </div>
+            <div class="nawPc">
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li id="menu1" class="nav__item"><a href="#about">О нас</a></li>
+                        <li id="menu2" class="nav__item"><a href="#services">Услуги</a></li>
+                        <li id="menu3" class="nav__item"><a href="#projects">Проекты</a></li>
+                        <li id="menu4" class="nav__item"><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__burger" id="burgerMenu">
+                <div class="header__burger__inner">
+                        <div class="header__burger-line"></div>
+                        <div class="header__burger-line"></div>
+                        <div class="header__burger-line"></div>
+                </div>
+                <div class="nav__header_mobl">
+                    <nav class="nav__header_mobl__inner">
+                        <ul class="nav__list__mob">
+                            <li id="menu1" class="nav__item"><a href="#about">О нас</a></li>
+                            <li id="menu2" class="nav__item"><a href="#servicesmob">Услуги</a></li>
+                            <li id="menu3" class="nav__item"><a href="#projectsmob">Проекты</a></li>
+                            <li id="menu4" class="nav__item"><a href="#contact">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <img class="girl__boorger" src="./assets/images/moble/boorgerHeadermob.svg">
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="main__page" id="topSite">
+
+            <p class="titleMainPc">Центр исследований <br>и разработки</p>
+            <p class="titleMainPh">Центр <br>исследований и<br> разработки</p>
+
+            <img class="imgMainLine" src="./assets/images/moble/mainLine.svg">
+            <img src="./assets/images/background/center.svg" alt="home-background" class="home-background-center">
+            <img src="./assets/images/logo/лого главная.svg" alt="home-background" class="home-background-logoGlav">
+            <a href="#about"> <img src="./assets/images/icon/стрелка-скрол.svg" alt="home-background"
+                    class="home-background-arrow"></a>
+        </div>
+
+        <div class="About" id="about">
+            <img class="AboutLine" src="./assets/images/ui/блок о нас.svg">
+            <img class="peopleAbout" src="./assets/images/moble/peopleAbout.svg">
+            <div class="aboutTxet">
+                <p>Центр исследований и разработки это передовая научно-техническая компания, занимающаяся разработкой
+                    прогрессивных программных и аппаратных решений. <br>
+                    <br>
+                    <span class="block_slide">Мы решаем широкий спектр задач, включая разработку веб приложений,
+                        приложений для мобильных платформ,
+                        разработку аппаратных решений и систем на базе интернета вещей, решений с использованием
+                        виртуальной
+                        и дополненной реальности, преобразовывая идеи, в уникальные, эффективные и доступные
+                        технологии.<br>
+                        <br>
+                        Мы стремимся помочь нашим клиентам ускорить цифровую трансформацию и улучшить бизнес-процессы с
+                        помощью наших продуктов и услуг.</span>
+                </p>
+                <div class="buttonText">
+                    <img class="btnabout" src="./assets/images/moble/imgArrowAb.svg">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Services" id="services">
+            <img src="./assets/images/ui/блок услуги.svg">
+            <img class="bg__service" src="./assets/images/background/black-services-bg.svg">
+            <div class="Services__inner">
+                <div class="Services__inner__block1">
+                    <p>Разработка веб приложений</p>
+                    <img class="img_servBlock" src="./assets/images/ui/LW_service.svg">
+                </div>
+                <div class="Services__inner__block2">
+                    <p>Разработка программно-аппаратных решений</p>
+                    <img class="img_servBlock" src="./assets/images/ui/PW_service.svg">
+                </div>
+                <div class="Services__inner__block3">
+                    <p>Разработка мобильных приложений</p>
+                    <img class="img_servBlock" src="./assets/images/ui/LN_service.svg">
+                </div>
+                <div class="Services__inner__block4">
+                    <p>Разработка решений IoT</p>
+                    <img class="img_servBlock" src="./assets/images/ui/PN_service.svg">
+                </div>
+
+            </div>
+            <div class="button__message__block">
+                <a href="#contact"><button class="button__message">Связаться с нами</button></a>
+            </div>
+            <div class="bg__service__black__left"></div>
+            <div class="bg__service__black__right"></div>
+
+        </div>
+        
+
+        <img class="ServicesMobleBg" src="./assets/images/moble/bgService.svg" alt="">
+        <div class="ServicesMobile" id="servicesmob">
+            <img style="display: none;" src="./assets/images/moble/lineservTop.svg">
+
+            <div class="servMob__inner">
+                <div class="center">
+                    <div>
+                        <div class="blockMobText__inner">
+                            <div class="blockMobText__img" style="width: 50px;">
+                                <img src="./assets/images/moble/galocha.svg">
+                            </div>
+                            <div class="blockMobText">
+                                <p>Разработка веб приложений</p>
+                            </div>
+
+                        </div>
+                        <div class="blockMobText__inner">
+                            <div class="blockMobText__img mobRel" style="width: 50px;">
+                                <img src="./assets/images/moble/galocha.svg">
+                            </div>
+                            <div class="blockMobText">
+                                <p>Разработка программно-аппаратных решений</p>
+                            </div>
+
+                        </div>
+                        <div class="blockMobText__inner">
+                            <div class="blockMobText__img" style="width: 50px;">
+                                <img src="./assets/images/moble/galocha.svg">
+                            </div>
+                            <div class="blockMobText">
+                                <p>Разработка мобильных приложений</p>
+                            </div>
+
+                        </div>
+                        <div class="blockMobText__inner">
+                            <div class="blockMobText__img" style="width: 50px;">
+                                <img src="./assets/images/moble/galocha.svg">
+                            </div>
+                            <div class="blockMobText">
+                                <p>Разработка решений IoT</p>
+                            </div>
+
+                        </div>
+                        <div class="button__message__block">
+                            <a href="#contact"><button class="button__message">Связаться с нами</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project -->
+        <div class="Project" id="projects">
+            <img src="./assets/images/ui/project.svg" style="position: absolute; right: 0;">
+            <img src="./assets/images/ui/program.svg" style="position: relative; top: 150px;">
+            <div class="projcet_Program">
+                <div class="block__prog__program__inner">
+                    <div class="block_img_proj">
+                        <a href="https://play.google.com/store/apps/details?id=com.sfedu.crafsed.taganrogdefence&pli=1"
+                            target="_blank"><img src="./assets/images/ui/project/конь.svg"></a>
+                    </div>
+                    <div class="block_text_proj">
+                        <p>Фестиваль “Оборона Таганрога”</p>
+                    </div>
+                    <img style="position: absolute; bottom: 30px; right: 0;" src="./assets/images/ui/project/line.svg">
+                    <div class="block_link_proj" style="position: absolute; bottom: -20px;">
+                        <a href="https://play.google.com/store/apps/details?id=com.sfedu.crafsed.taganrogdefence&pli=1"
+                            target="_blank">
+                            <p>Google Play</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="block__prog__program__inner">
+                    <div class="block_img_proj">
+                        <a href="https://apps.apple.com/ru/app/амброзия/id1620858412?l=en" target="_blank"><img
+                                style="position: relative; left: -20px;"
+                                src="./assets/images/ui/project/амброзия.svg"></a>
+                    </div>
+                    <div class="block_text_proj">
+                        <p>Амброзия</p>
+                    </div>
+                    <img style="position: absolute; bottom: 30px; right: 0;" src="./assets/images/ui/project/line.svg">
+                    <div class="block_link_proj" style="position: absolute;
+                     bottom: -50px;">
+                        <a href="https://apps.apple.com/ru/app/амброзия/id1620858412?l=en" target="_blank">
+                            <p>App Store</p>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.TagProject&hl=ru&gl=US"
+                            target="_blank" style="position: relative; top: -10px;">
+                            <p>Google Play</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="block__prog__program__inner block__goTop">
+                    <div class="block_img_proj">
+                        <a href="https://биржапрактик.рф/" target="_blank"><img
+                                src="./assets/images/ui/project/биржа.svg"></a>
+                    </div>
+                    <div class="block_text_proj">
+                        <p>Биржа практик</p>
+                    </div>
+                    <img style="position: absolute; bottom: 10px; right: 0;" src="./assets/images/ui/project/line.svg">
+                    <div class="block_link_proj">
+                        <a href="https://биржапрактик.рф/" target="_blank" style="position: relative; bottom: -20px;">
+                            <p>Web</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="projcet_Apparat" >
+                <div class="projcet_Apparat_img">
+                    <img src="./assets/images/ui/apparat.svg">
+                </div>
+                <div class="projcet_Apparat_block">
+
+                    <div class="block__prog__program__inner">
+                        <div class="block_img_proj">
+                            <img src="./assets/images/ui/project/stm32.svg">
+                        </div>
+                        <div class="block_text_proj">
+                            <p>Лабораторный стенд STM32</p>
+                        </div>
+                        <img style="position: absolute; bottom: 30px; right: 0; display: none;"
+                            src="./assets/images/ui/project/line.svg">
+                        <div style="display: none;" class="block_link_proj">
+                            <a>
+                                <p>Ссылка</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="block__prog__program__inner">
+                        <div class="block_img_proj">
+                            <img src="./assets/images/ui/project/муссорки.svg">
+                        </div>
+                        <div class="block_text_proj">
+                            <p>Мониторинг наполненности мусорных контейнеров</p>
+                        </div>
+                        <img style="position: absolute; bottom: 30px; right: 0; display: none;"
+                            src="./assets/images/ui/project/line.svg">
+                        <div class="block_link_proj" style="display: none;">
+                            <a>
+                                <p>Ссылка</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="block__prog__program__inner">
+                        <div class="block_img_proj">
+                            <img src="./assets/images/ui/project/пешеход.svg">
+                        </div>
+                        <div class="block_text_proj">
+                            <p>Умный пешеходный переход</p>
+                        </div>
+                        <img style="position: absolute; bottom: 30px; right: 0; display: none;"
+                            src="./assets/images/ui/project/line.svg">
+                        <div class="block_link_proj" style="display: none;">
+                            <a>
+                                <p>Ссылка</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Project -->
+
+
+        <!-- ProjectMoble -->
+        <div class="ProjectMoble" id="projectsmob">
+            <img class="lineProject" src="./assets/images/moble/lineProject.svg">
+            <div class="slider-container">
+                <div class="slider-container">
+
+                    <div class="slide ">
+                        <div class="slide__inner">
+                            <img src="./assets/images/ui/project/конь.svg">
+                            <div class="textmob">
+                                <div class="block_text_projMoble">
+                                    <div class="nameProj">
+                                        <p>Фестиваль “Оборона Таганрога”</p>
+                                    </div>
+                                    <div class="block_link_projMoble">
+                                        <img style="position: absolute; right: 0;"
+                                            src="./assets/images/ui/project/line.svg">
+                                        <a href="https://play.google.com/store/apps/details?id=com.sfedu.crafsed.taganrogdefence&pli=1"
+                                            target="_blank">
+                                            <p>Google Play</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide ">
+                        <div class="slide__inner">
+                            <img src="./assets/images/ui/project/амброзия.svg">
+                            <div class="textmob">
+                                <div class="block_text_projMoble">
+                                    <div class="nameProj">
+                                        <p>Амброзия</p>
+                                    </div>
+                                    <div class="block_link_projMoble">
+                                        <img style="position: absolute; right: 0;"
+                                            src="./assets/images/ui/project/line.svg">
+                                        <div style="display: block;">
+                                            <a style="position: relative; right: -87px;"
+                                                href="https://apps.apple.com/ru/app/амброзия/id1620858412?l=en"
+                                                target="_blank">
+                                                <p>App Store</p>
+                                            </a>
+                                            <a href="https://play.google.com/store/apps/details?id=com.TagProject&hl=ru&gl=US"
+                                                target="_blank" style="position: relative; top: -20px; right: -80px;">
+                                                <p>Google Play</p>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide ">
+                        <div class="slide__inner">
+                            <img src="./assets/images/ui/project/биржа.svg">
+                            <div class="textmob">
+                                <div class="block_text_projMoble">
+                                    <div class="nameProj">
+                                        <p>Биржа практик</p>
+                                    </div>
+                                    <div class="block_link_projMoble">
+                                        <img style="position: absolute; right: 25px;"
+                                            src="./assets/images/ui/project/line.svg">
+                                        <a style="position: absolute; right: 25px; " href="https://биржапрактик.рф/"
+                                            target="_blank">
+                                            <p>Web</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide ">
+                        <div class="slide__inner">
+                            <img src="./assets/images/ui/project/stm32.svg">
+                            <div class="textmob">
+                                <div class="block_text_projMoble">
+                                    <div class="nameProj">
+                                        <p>Лабораторный стенд STM32</p>
+                                    </div>
+                                    <div class="block_link_projMoble" style="display: none;">
+                                        <img style="position: absolute; right: 0;"
+                                            src="./assets/images/ui/project/line.svg">
+                                        <a>
+                                            <p>Ссылка</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide ">
+                        <div class="slide__inner">
+                            <img src="./assets/images/ui/project/муссорки.svg">
+                            <div class="textmob">
+                                <div class="block_text_projMoble">
+                                    <div class="nameProj">
+                                        <p>Мониторинг наполненности мусорных контейнеров</p>
+                                    </div>
+                                    <div class="block_link_projMoble" style="display: none;">
+                                        <img style="position: absolute; right: 0;"
+                                            src="./assets/images/ui/project/line.svg">
+                                        <a>
+                                            <p>Ссылка</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide ">
+                        <div class="slide__inner">
+                            <img src="./assets/images/ui/project/пешеход.svg">
+                            <div class="textmob">
+                                <div class="block_text_projMoble">
+                                    <div class="nameProj">
+                                        <p>Умный пешеходный переход</p>
+                                    </div>
+                                    <div class="block_link_projMoble" style="display: none;">
+                                        <img style="position: absolute; right: 0;"
+                                            src="./assets/images/ui/project/line.svg">
+                                        <a>
+                                            <p>Ссылка</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dots"></div>
+            </div>
+        </div>
+        <!-- /ProjectMoble -->
+
+    </div>
+    <footer>
+        <div class="container" id="contact">
+            <div class="footer__inner">
+                <div class="block_text">
+                    <p class="footer__title">Вас интересует<br> разработка проекта?</p>
+                    <p class="footer__subtitle">Мы свяжемся с вами на следующий<br> рабочий день и проконсультируем<br>
+                        по всем вопросам </p>
+                    <p class="footer__mail" style="position: relative; bottom: -10px;"><a>info@rdcenter.ru</a></p>
+                    <p class="footer__number" style="position: relative; top: -10px;"><a>8 999 900-99-99</a></p>
+                </div>
+                <div class="footerSvazLine" style="position: relative; top: 50px;"><img
+                        src="./assets/images/moble/footerLine.svg"></div>
+                <div class="block_line"><img src="./assets/images/ui/footer__line.svg"></div>
+                <div class="block_form">
+                    <div>
+                        <form enctype="multipart/form-data" class="contact__form" method="POST" action="./assets/scripts/SubmitForm.php" >
+                            <p class="Error_message"></p>
+                            <input class="input" type="text" placeholder="Имя*" name="name">
+                            <input class="input" type="text" placeholder="E-mail*" name="e-mail">
+                            <textarea class="input" type="text"
+                                placeholder="Расскажите о проекте*" name="textArea"></textarea>
+                            <input onchange="showFileName(this)" name="file" class="input__file" type="file"
+                                placeholder="Прикрепите файл" accept=".pdf, .doc, .docx">
+                            <label class="input__file__label" id="input__file__label">Прикрепите файл</label>
+                            <img class="screp" src="./assets/images/ui/screp.svg">
+                        </form>
+                        <div class="block__footer__button">
+                            <button class="submit__button" type="submit">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_logoFooter">
+                    <img src="./assets/images/logo/footer__logo.svg">
+                </div>
+                <div class="Psbottom">
+                    <p class="text">© 2023 ООО Центр исследований и разработки</p>
+                    <p class="footerSicr">Город Таганрог</p>
+                    <p class="footerSicr"> ИНН 6154164546. ОГРН: 1236100005613</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script src="./assets/scripts/index.js?v=<?php echo rand(0, 900);?>"></script>
+<script src="./assets/scripts/slider.js?v=<?php echo rand(0, 900);?>"></script>
+<script src="./assets/scripts/boorger.js?v=<?php echo rand(0, 900);?>"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</html>

@@ -1162,9 +1162,9 @@ textarea::placeholder {
     }
 
     .imgMainLine {
-        display: block;
+        display: none;
         position: absolute;
-        top: 30%;
+        top: 35%;
         z-index: 10;
     }
 
@@ -1211,7 +1211,12 @@ textarea::placeholder {
     .nawPc {
         display: none;
     }
-
+    .imgMainLine {
+        display: block;
+        position: absolute;
+        top: 31%;
+        z-index: 10;
+    }
     .header__burger {
         display: block;
         padding: 0px 20px 0px 0px;
