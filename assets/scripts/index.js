@@ -142,7 +142,7 @@ submit__button.addEventListener("click", () => {
   var name = document.querySelector('.contact__form input[type="text"][placeholder="Имя*"]');
   var email = document.querySelector('.contact__form input[type="text"][placeholder="E-mail*"]');
   var message = document.querySelector('.contact__form textarea');
-  var FileName = document.querySelector(".input__file__label").textContent;
+  var FileName = document.querySelector(".input__file__label");
 
   if (name.value === "") {
     name.style = "box-shadow: 0 0 10px 3px red";
@@ -153,18 +153,25 @@ submit__button.addEventListener("click", () => {
   if (!re.test(email.value)) {
     email.style = "box-shadow: 0 0 10px 3px red";
   }
-  if (FileName === "Прикрепите файл") {
+  if (FileName.textContent === "Прикрепите файл") {
     document.querySelector(".input__file").style = "box-shadow: 0 0 10px 3px red";
   }
-  if (name.value != "" && message.value != "" && FileName != "Прикрепите файл" && re.test(email.value)) {
+  {
+    let captcha = grecaptcha.getResponse();
+    if(!captcha.length){
+
+    }else{
+      
+    }
     console.log("Отправил");
-    SubmitForm();
-  } else {
-    console.log("неа");
-  }
+    //SubmitForm();
+    FileName.textContent = "Прикрепите файл"
+    FileName.style.color = "#EFEFEF"
+  } 
 })
 
 // Отправка формы -------------------------------------------------
+
 
 // Получаем элементы формы
 function SubmitForm() {
