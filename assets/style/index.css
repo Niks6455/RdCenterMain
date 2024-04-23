@@ -26,7 +26,15 @@ h5,
 h6 {
     margin: 0;
 }
-
+@font-face {
+    font-family: 'ArimaLight';
+    src: url(./../fonts/arimamadurai/ArimaMadurai-Light.ttf);
+  }
+  @font-face {
+    font-family: 'ArimaBolt';
+    src: url(./../fonts/arimamadurai/ArimaMadurai-SemiBold.ttf);
+  }
+  
 hr {
     display: block;
     width: 100%;

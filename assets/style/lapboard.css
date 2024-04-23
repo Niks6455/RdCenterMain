@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'ArimaLight';
+    src: url(./../fonts/arimamadurai/ArimaMadurai-Light.ttf);
+  }
+  @font-face {
+    font-family: 'ArimaBolt';
+    src: url(./../fonts/arimamadurai/ArimaMadurai-SemiBold.ttf);
+  }
+  *:after {
+    font-family: 'Raleway'  ;
+    box-sizing: border-box;
+}
+
+
+/* homePage */
+.homePageLapboard{
+    height: 95vh;
+}
+.homePageLapboard__text{
+   margin-top: 30px;
+}
+.homePageLapboard__title{
+    font-size: 74px;
+    font-weight: 500;
+    line-height: 86.88px;
+    letter-spacing: 0.067em;
+    text-align: left;
+    margin: 0;
+}
+.homePageLapboard__subtitle{
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 28.52px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    width: 686px;
+}
+.homePageLapboard__inner{
+    display: flex;
+    justify-content: center;
+    padding-top: 125px;
+}
+
+/* LapBoardInfo */
+.lapBoard_info__inner{
+    display: flex;
+    background-color: #000;
+}
+.lapBoard_info{
+    background-color: #000;
+    height: 625px;
+}
+.lapBoard__info__text{
+    margin-left: 200px;
+}
+.lapBoard__info__text p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+}
+.lapBoard__info__text p:first-child{
+    margin: 131px 0px 110px 0px;
+}
+
+.lapBoard__info__gif video{
+    height: 615px;  
+}
+
+/* equipment */
+.equipment{
+    border: 1px solid #000000;
+    margin: 150px 0px;
+    max-width: 1515px;
+}
+.equipment__block1{
+    padding: 60px;
+}
+.equipment__block1 p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+.equipment__block2{
+    border-left: 1px solid #000000;
+    padding: 60px 50px;
+}
+.equipment__inner{
+    display: flex;
+}
+ul li{
+font-size: 22px;
+font-weight: 400;
+line-height: 44px;
+letter-spacing: 0.1em;
+text-align: left;
+}
+.arrowRight{
+    display: flex;
+    justify-content: end;
+}
+
+/* vigeoLapboard */
+.vigeoLapboard video{
+    height: 100vh;
+    width: 100%;
+}
+.vigeoLapboard{
+    margin-bottom: 150px;
+}
+/* opportunities */
+.opportunities__text{
+    padding: 60px;
+    width: 800px;
+    border: 1px solid #000000;
+}
+.opportunities{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.opportunities__text h3{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+.opportunities .opportunities__text p{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.8px;
+    letter-spacing: 0.1em;
+    text-align: left;     
+}
+
+.opportunities .form form,.opportunities .form {
+    position: relative;
+    top: 0;
+
+}
+.opportunities .form {
+    background-color:   #ECECEC;
+}
+.opport__inputForm input{
+    background-color: #fff;
+}
+/* subtitleLapboard */
+.subtitleLapboard{
+    margin-top: 150px;
+}
+.subtitleLapboard__inner{
+    display: flex;
+    justify-content: center;
+}
+.subtitleLapboard__block1 img{
+    width: 800px;
+}
+.subtitleLapboard__block2__text p{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 39.2px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin-left: 90px;
+    margin-top: 300px;
+}
+.document{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: 100px;
+}
+.document p{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 38.74px;
+    text-align: left;
+    width: 125px;
+}
+.document img{
+    width: 130px;
+    height: 130px;
+}
+/* moneyBlock */
+.moneyBlock{
+    margin-top: 250px;
+    margin-bottom: 200px;
+    width: 600px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.8px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
