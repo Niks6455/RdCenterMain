@@ -19,8 +19,7 @@ if(isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
 }
 
 // Устанавливаем адрес получателя
-$to = '7929189niks64@gmail.com';
-
+$to = 'info@rdcenter.ru';
 // Устанавливаем тему письма
 $subject = 'Новое письмо с сайта R&D Center';
 
@@ -53,9 +52,13 @@ if(isset($attachments)) {
 }
 
 // Отправляем письмо
-if(mail($to, $subject, $body, $headers)) {
-    echo 'Письмо успешно отправлено!';
-} else {
-    echo 'Ошибка при отправке письма.';
+$success = mail($to, $subject, $body, $headers);
+if (!$success) {
+    $errorMessage = error_get_last()['message'];
+    echo $errorMessage;
+}else{
+        echo 'Письмо успешно отправлено!';
+
 }
+
 ?>

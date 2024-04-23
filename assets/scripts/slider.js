@@ -12,23 +12,34 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   var currentIndex = 0;
-  var intervalId;
-  var touchStartX = 0;
-  var touchEndX = 0;
-
   showSlide(currentIndex);
 
-  // Функция для автоматического перелистывания слайдов
-  function autoSlide() {
-    currentIndex++;
-    if (currentIndex >= slides.length) {
-      currentIndex = 0;
-    }
-    showSlide(currentIndex);
-  }
 
-  // Запустить автоматическое перелистывание каждые 3 секунды
-  intervalId = setInterval(autoSlide, 3000);
+const btn_prev = document.querySelector(".btn_prev");
+const btn_next = document.querySelector(".btn_next")
+
+  btn_prev.addEventListener("click", function() {
+    if(currentIndex === 0){
+      currentIndex = 5
+      showSlide(currentIndex);
+    }else{
+      currentIndex--;
+      console.log(currentIndex)
+      showSlide(currentIndex);
+    }
+  })
+  
+  btn_next.addEventListener("click", function() {
+    if(currentIndex === 5){
+      currentIndex = 0
+      showSlide(currentIndex);
+    }else{
+      currentIndex++;
+      console.log(currentIndex)
+      showSlide(currentIndex);
+    }
+  })
+
 
   function showSlide(index) {
     for (var i = 0; i < slides.length; i++) {
@@ -38,48 +49,5 @@ document.addEventListener("DOMContentLoaded", function() {
     slides[index].classList.add("active");
     dots[index].classList.add("active");
   }
-
-  // Обработчик события для точек слайдов
-  dotsContainer.addEventListener("click", function(event) {
-    if (event.target.classList.contains("dot")) {
-      clearInterval(intervalId); // Остановить автоматическое перелистывание
-      var index = parseInt(event.target.dataset.index);
-      currentIndex = index;
-      showSlide(currentIndex);
-    }
-  });
-
-  // Обработчики событий для свайпов
-  slides.forEach(function(slide) {
-    slide.addEventListener("touchstart", function(event) {
-      touchStartX = event.touches[0].clientX;
-    });
-
-    slide.addEventListener("touchmove", function(event) {
-      touchEndX = event.touches[0].clientX;
-    });
-
-    slide.addEventListener("touchend", function(event) {
-      var touchDiff = touchStartX - touchEndX;
-      if (touchDiff > 0 && !event.target.closest("a")) {
-        // Свайп влево и не нажатие на ссылку
-        clearInterval(intervalId); // Остановить автоматическое перелистывание
-        currentIndex++;
-        if (currentIndex >= slides.length) {
-          currentIndex = 0;
-        }
-        showSlide(currentIndex);
-      } else if (touchDiff < 0 && !event.target.closest("a")) {
-        // Свайп вправо и не нажатие на ссылку
-        clearInterval(intervalId); // Остановить автоматическое перелистывание
-        currentIndex--;
-        if (currentIndex < 0) {
-          currentIndex = slides.length - 1;
-        }
-        showSlide(currentIndex);
-      }
-    });
-  });
-
-  
 });
+ 

@@ -127,13 +127,14 @@ ul li {
     z-index: 10;
     position: absolute;
     left: 150px;
-    top: 265px;
+    /*top: 265px;*/
+    bottom:40%;
 }
 
 .home-background-logoGlav {
     position: absolute;
     right: 150px;
-    top: 230px;
+     bottom:38%;
     z-index: 11;
 
 }
@@ -147,7 +148,7 @@ ul li {
 /* About */
 .About {
     height: 550px;
-    background-color: #ffffff;
+    background-color: none;
     position: relative;
 }
 
@@ -168,6 +169,7 @@ ul li {
     left: 304px;
     position: absolute;
     padding-right: 15px;
+    z-index: 11;
 }
 
 /* services */
@@ -570,16 +572,21 @@ textarea::placeholder {
 
 .input__file__label {
     position: relative;
-    top: -37px;
+    top: -45px;
     z-index: 10;
     color: #000000;
     left: 30px;
     width: 400px;
+    border-radius:10px;
+    left:10px;
     height: 45px;
     display: flex;
     font-size: 16px;
+    padding-left:20px;
     justify-content: space-between;
     pointer-events: none;
+    background-color:#fff;
+    padding-top:10px;
 }
 
 .input__file__label img {
@@ -596,49 +603,14 @@ textarea::placeholder {
     width: 25px;
     height: 25px;
     pointer-events: none;
-
+    z-index:10;
 }
 
 /* MobleNone */
-.ServicesMobile {
+.ServicesMobile, .ProjectMoble, .buttonText,.header__burger,.imgMainLine,.peopleAbout,.ServicesMobleBg,.imgMainLine,.footerSvazLine,.titleMainPh {
     display: none;
 }
 
-.ProjectMoble {
-    display: none;
-}
-
-.buttonText {
-    display: none;
-}
-
-.header__burger {
-    display: none;
-}
-
-.imgMainLine {
-    display: block;
-}
-
-.peopleAbout {
-    display: none;
-}
-
-.ServicesMobleBg {
-    display: none;
-}
-
-.imgMainLine {
-    display: none;
-}
-
-.footerSvazLine {
-    display: none;
-}
-
-.titleMainPh {
-    display: none;
-}
 .block_link_projMoble a{
     z-index: 2;
 }
@@ -654,13 +626,14 @@ textarea::placeholder {
     width:100%;
     margin:5px 0px 10px 0px;
 }
+
+/*Адаптив*/
 @media(max-width:1266px) {
     .container{
         overflow:hidden;
     }
     .aboutTxet p {
         font-size: 22px;
-
     }
     .text, .footerSicr{
         margin-bottom:-10px;
@@ -669,12 +642,10 @@ textarea::placeholder {
         width: 450px;
         font-size: 42px;
     }
-
     .Services__inner__block1 p,
     .Services__inner__block2 p,
     .Services__inner__block3 p,
     .Services__inner__block4 p {
-
         top: 75%;
         font-size: 22px;
         max-width: 350px;
@@ -808,9 +779,6 @@ textarea::placeholder {
     .Services__inner__block3 {
         left: 100px;
     }
-
-
-
 
     .Services__inner__block1 img,
     .Services__inner__block2 img {
@@ -1000,16 +968,43 @@ textarea::placeholder {
 
     .slide.active {
         opacity: 1;
+        position:relative;
+        z-index:10;
+        
     }
-
+    
+     /* //button */
+    .button__slider{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: -92px;
+    }
+    .button__slider button{
+        background: none;
+        border: none;
+        position: relative;
+        z-index: 10;
+    }
+    .button__slider button img{
+        width: 50px;
+        height: 50px;
+    }
+    .btn_prev img{
+        transform: rotate(180deg);
+        margin-right: 150px;
+    }
+    
+      /* //button */
     .dots {
         position: absolute;
-        bottom: 0px;
+        bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-bottom:5px;
     }
 
     .dot {
@@ -1080,9 +1075,11 @@ textarea::placeholder {
     form {
         left: 35px;
     }
-
     .center {
         padding-top: 50px;
+    }
+    .input__file__label{
+     width:300px;   
     }
 }
 
@@ -1141,7 +1138,7 @@ textarea::placeholder {
         display: block;
         position: absolute;
         right: 0;
-        z-index: 2;
+        z-index: 12;
         top: 95px;
     }
 
@@ -1223,8 +1220,7 @@ textarea::placeholder {
     .submit__button{
     left: 0;
     }
-     .footer__inner,
-    footer {
+     .footer__inner, footer {
         height: 680px;
     }
     .captcha__block{
@@ -1235,8 +1231,8 @@ textarea::placeholder {
 
 @media(max-width:790px) {
     .block_text{
-    top: 125px;
-}
+        top: 125px;
+    }
     .header__logo {
         position: absolute;
         left: 0;
@@ -1313,7 +1309,7 @@ textarea::placeholder {
         width: 100%;
         position: absolute;
         left: 0;
-        top: -15px;
+        top: -25px;
         padding-top: 60px;
     }
 
@@ -1341,7 +1337,7 @@ textarea::placeholder {
         transform: rotate(-90deg);
         position: absolute;
         right: -500px;
-        top: 35%;
+        top: 33%;
         width: 70vh;
     }
 
@@ -1417,6 +1413,9 @@ textarea::placeholder {
 
     .peopleAbout {
         top: -50px;
+       
+        position:absolute;
+        z-index:22;
     }
 
     .footer__subtitle,
@@ -1477,7 +1476,11 @@ textarea::placeholder {
         width: 256px;
         margin: 8px 0;
     }
-
+    .input__file__label{
+        padding-top:10px;
+        height: 35px;
+        top:-48px;
+    }
     .input::placeholder {
         font-family: Raleway;
         font-size: 12px;
@@ -1487,7 +1490,7 @@ textarea::placeholder {
         text-align: left;
 
     }
-
+    
     .input__file {
         margin: 8px 0;
         left: 0;
@@ -1505,7 +1508,7 @@ textarea::placeholder {
     }
 
     .screp {
-        bottom: 62px;
+        bottom: 53px;
         right: 5px;
     }
 
@@ -1520,12 +1523,27 @@ textarea::placeholder {
 
     .block_form {
         top: 85px;
-        margin-left: 20px;
+     display:flex;
+     justify-content:center;
+    }
+    .block_text{
+        display:flex;
+        justify-content:center;
+        width:100%;
+        
+    }
+    .footer__mail{
+        top:0;
+        left:-120px;
     }
     .captcha__block{
-        margin-top: -5px;
+        margin-top: 0px;
         left:-12px;
     }
+    .submit__button__inner{
+   
+    margin-left:-12px;
+}
 }
 
 @media(max-width:580px) {
@@ -1541,6 +1559,7 @@ textarea::placeholder {
 
     .aboutTxet {
         padding: 95px 0px 10px 0px;
+      
     }
 
     .btnabout {
@@ -1616,5 +1635,109 @@ textarea::placeholder {
 
     .header__logo img {
         margin: 10px 0px 0px 20px;
+    }
+}
+
+
+@media (max-height: 660px) and (min-width: 790px) {
+    .home-background-arrow {
+        display: none;
+    }
+  
+    .titleMainPc {
+        top: 25% !important;
+    }
+}
+
+@media (max-height: 630px) and (max-width: 790px) {
+    .home-background-logoGlav {
+        left: 53%;
+        top: 15%;
+    }
+  
+    .titleMainPc {
+        top: 30% !important;
+    }
+  
+    .imgMainLine {
+        display: none;
+    }
+  
+    .home-background-center {
+        display: none;
+    }
+  
+    .home-background {
+        transform: rotate(0deg);
+        left: 0%;
+        width: 100%;
+        top: 150px;
+    }
+}
+
+@media (max-height: 630px) and (max-width: 640px) {
+    .home-background-logoGlav {
+        width: 125px !important;
+    }
+  
+    .main__page p {
+        font-size: 28px;
+    }
+ 
+    .aboutTxet {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 420px) and (min-height: 539px) {
+    .home-background-logoGlav {
+        left: 5% !important;
+        top: 40%;
+    }
+}
+
+@media (max-height: 540px) {
+    .home-background-logoGlav {
+        width: 250px;
+        height: 250px;
+        right: 10% !important;
+        top: 10%;
+    }
+  
+    .titleMainPc {
+        top: 15% !important;
+    }
+  
+    .home-background-center {
+        display: none;
+    }
+  
+    .home-background {
+        top: 100px;
+    }
+  
+    .peopleAbout {
+        display: block;
+    }
+}
+
+@media (max-height: 380px) {
+    .home-background-logoGlav {
+        width: 200px;
+        height: 200px;
+        bottom: 30%;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-background-logoGlav {
+        top: 40%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 460px) and (max-height: 400px) {
+    .peopleAbout {
+        display: none;
     }
 }

@@ -130,12 +130,12 @@ form.addEventListener("input", () => {
   }
 })
 
-document.querySelector('input[type="file"]').addEventListener('change', function (event) {
-  var FileName = document.querySelector(".input__file__label");
-  if (FileName.textContent != "Прикрепите файл") {
-    document.querySelector(".input__file").style = "box-shadow: none";
-  }
-});
+// document.querySelector('input[type="file"]').addEventListener('change', function (event) {
+//   var FileName = document.querySelector(".input__file__label");
+//   if (FileName.textContent != "Прикрепите файл") {
+//     document.querySelector(".input__file").style = "box-shadow: none";
+//   }
+// });
 
 submit__button.addEventListener("click", () => {
     var name = document.querySelector('#namePole');
@@ -153,10 +153,10 @@ submit__button.addEventListener("click", () => {
     email.style = "box-shadow: 0 0 10px 3px red";
   }
  
-  if (FileName.textContent === "Прикрепите файл") {
-    document.querySelector(".input__file").style = "box-shadow: 0 0 10px 3px red";
-  }
-  if(name.value != "" && message.value != "" && re.test(email.value) && FileName.textContent != "Прикрепите файл" ) {
+//   if (FileName.textContent === "Прикрепите файл") {
+//     document.querySelector(".input__file").style = "box-shadow: 0 0 10px 3px red";
+//   }
+  if(name.value != "" && message.value != "" && re.test(email.value)) {
     let captcha = grecaptcha.getResponse();
     if(!captcha.length){
         document.querySelector("#recaptchaError").textContent = "Вы не прошли проверку капчей"
@@ -243,11 +243,11 @@ btnabout.addEventListener("click", function () {
 //при навидении скрепка становится зеленая -----------------------------------
 var inputElement = document.querySelector(".input__file");
 var imageElement = document.querySelector(".screp");
-var hoverImageUrl = "./assets/images/ui/screpGreen.svg";
+var hoverImageUrl = "./assets/images/R&dMain/ui/screpGreen.svg";
 inputElement.addEventListener("mouseover", function() {
     imageElement.src = hoverImageUrl;
 });
 
 inputElement.addEventListener("mouseout", function() {
-  imageElement.src = "./assets/images/ui/screp.svg";
+  imageElement.src = "./assets/images/R&dMain/ui/screp.svg";
 });
