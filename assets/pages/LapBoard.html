@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./../style/footer.css">
     <link rel="stylesheet" href="./../style/lapboard.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <title>R&D Center</title>
 
@@ -29,13 +30,13 @@
                            <a href="https://t.me/kolokchik" target="_blank"><img src="https://rdcenter.ru/assets/images/practiceExchange/icon/tg.svg"></a> 
                         </div>
                     </div>
-                    <div class="burder__header" style="display: none;">
+                    <div class="burder__header">
                         <div class="burger__header__nav">
                             <nav>
                                 <ul>
-                                    <li id="menu1" class="nav__item"><a href="#about" onclick="open__close_burger()">О нас</a></li>
-                                    <li id="menu2" class="nav__item"><a href="#reviews" onclick="open__close_burger()">Отзывы</a></li>
-                                    <li id="menu3" class="nav__item"><a href="#connect" onclick="open__close_burger()">Как подключиться?</a></li>
+                                    <li id="menu1" class="nav__item"><a href="#about" onclick="open__close_burger()">О стенде</a></li>
+                                    <li id="menu2" class="nav__item"><a href="#reviews" onclick="open__close_burger()">Оборудование</a></li>
+                                    <li id="menu3" class="nav__item"><a href="#connect" onclick="open__close_burger()">Возможностии стенда</a></li>
                                     <li id="menu4" class="nav__item"><a href="#doc" onclick="open__close_burger()">Документы</a></li>
                                 </ul>
                             </nav>
@@ -131,8 +132,8 @@
                         и настройку разработанного программного обеспечения
                     </p>
                 </div>
-                <div class="form">
-                    <form enctype="multipart/form-data" method="post" action="SubmitFormBirjs.php" >
+                <div class="formLabBoard">
+                    <form class="form" enctype="multipart/form-data" method="post" action="SubmitFormBirjs.php" >
                         <div class="title__form">
                             <p>ЗАПОЛНИТЕ ЗАЯВКУ</p>
                         </div>
@@ -140,14 +141,14 @@
                             <p>и получите доступ к демонстрационной версии</p>
                         </div>
                         <div class="inp__form opport__inputForm">
-                            <input type="text" class="input__form" placeholder="Имя" name="name" id="name1" required>
+                            <input type="text" class="input__form" placeholder="Имя" name="name" id="name" required>
                             <br>
-                            <input type="text" class="input__form input__form2 text__number phone1" id="numPhone" placeholder="+7 (___) ___-__-__" name="phone"  required >
+                            <input type="text" class="input__form input__form2 text__number" id="LabBoardPhone" placeholder="+7 (___) ___-__-__" name="phone"  required >
                             <br>
-                            <input type="text" class="input__form" placeholder="Email" name="email" id="email1" required>
+                            <input type="text" class="input__form" placeholder="Email" name="email" id="email" required>
                         </div>
                         <div class="btn__form">
-                            <button type="button" data-callback='onSubmit' onclick="SubmitData1()" id="LabBoardBtnSubmit"><p>ОТПРАВИТЬ ЗАЯВКУ</p></button>
+                            <button type="button" data-callback='onSubmit' onclick="SubmitData()" id="LabBoardBtnSubmit"><p>ОТПРАВИТЬ ЗАЯВКУ</p></button>
                         </div>
                     </form>
                 </div>
@@ -234,9 +235,12 @@
 
         </div>
     </footer>
+    <div class="head__eventNoneBgs"></div>
+
 </body>
-<script src="./../scripts/function__burjs.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script src="./../scripts/function__burjs.js"></script> -->
 <script src="./../scripts/index.js"></script>
+<script src="./../scripts/LapBoard.js"></script>
 <script src="https://unpkg.com/imask"></script>
-<script src="./../scripts/boorger.js"></script>
 </html>
