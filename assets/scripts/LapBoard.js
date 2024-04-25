@@ -16,16 +16,9 @@ function open__close_burger() {
         header.classList.remove("active__boorger");
         head__eventNoneBgs.style.display = "none"
     } else {
-        console.log("Ну вот это отрабатывает")
         burder__header.style.display = "block"
         head__eventNoneBgs.style.display = "block"
         header.classList.add("active__boorger");
-        console.log("limp__header", limp__header)
-        console.log("burder__header", burder__header)
-        console.log("head__eventNoneBgs", head__eventNoneBgs)
-        console.log("head__eventNoneBgs", head__eventNoneBgs)
-
-
         let pos = 0;
         const duration = 1000; // Измените это значение по вашему усмотрению
         const start = performance.now();
@@ -132,3 +125,33 @@ function SubmitForm(formData){
     // })
   
 }
+
+
+
+
+//функция плавного скрола -------------------------------------------------------------------
+document.querySelectorAll('.jscorLink').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const href = this.getAttribute('href');
+      console.log('href', href)
+      const targetElement = document.querySelector(href);
+      console.log(targetElement)
+      if ('targetElement', targetElement) {
+        const offset = targetElement.offsetTop - 150;
+        console.log('offset', offset)
+        window.scrollTo({
+          top: offset,
+          behavior: 'smooth'
+        });
+      }
+      if(href==="#document"){
+        const targetElement = document.querySelector("#opportunities");
+        const offset = targetElement.offsetTop + 650; 
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+          });
+      }
+    });
+  });

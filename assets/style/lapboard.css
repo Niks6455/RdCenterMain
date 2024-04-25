@@ -118,6 +118,7 @@ text-align: left;
     padding: 60px;
     width: 800px;
     border: 1px solid #000000;
+    height: 620px;
 }
 .opportunities{
     display: flex;
@@ -146,6 +147,10 @@ text-align: left;
 }
 .opportunities .form {
     background-color:   #ECECEC;
+    top: -50px;
+}
+.title__form{
+    padding-top: 25px!important;
 }
 .opport__inputForm input{
     background-color: #fff;
@@ -159,7 +164,7 @@ text-align: left;
     justify-content: center;
 }
 .subtitleLapboard__block1 img{
-    width: 800px;
+    width: 750px;
 }
 .subtitleLapboard__block2__text p{
     font-size: 24px;
@@ -186,6 +191,13 @@ text-align: left;
 .document img{
     width: 130px;
     height: 130px;
+}
+.FileLapboard{
+    transition: 0.15s linear all;
+}
+.FileLapboard:hover{
+    opacity: 0.6;
+    cursor: pointer;
 }
 /* moneyBlock */
 .moneyBlock{

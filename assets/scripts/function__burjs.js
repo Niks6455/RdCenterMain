@@ -101,7 +101,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
               offset = offset - 500;
           }
           window.scrollTo({
-           
             top: offset,
             behavior: 'smooth'
           });
