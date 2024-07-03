@@ -69,7 +69,7 @@
                             <strong>Стенд для обучения</strong> программированию микроконтроллеров 
                         </p>
                         <div class="btn__form">
-                            <button type="button"  data-callback='onSubmit'  id="btn__footer__form"><p>Заказать сейчас</p></button>
+                            <a href="#buy"><button type="button"  data-callback='onSubmit'  id="btn__footer__form"><p>Заказать сейчас</p></button></a>
                         </div>
                     </div>
                     <div class="homePageLapboard__img"><img src="./../images/Stm32/Lapboard.svg" alt="LapboardIMG"></div>
@@ -133,22 +133,22 @@
                         и настройку разработанного программного обеспечения
                     </p>
                 </div>
-                <div class="formLabBoard">
-                    <form class="form" enctype="multipart/form-data" method="post" action="SubmitFormBirjs.php" style="height: 620px;">
-                        <div class="title__form">
+                <div class="formLabBoard" >
+                    <form class="form" enctype="multipart/form-data" method="post" action="SubmitFormBirjs.php" >
+                        <div class="title__form" >
                             <p>ЗАПОЛНИТЕ ЗАЯВКУ</p>
                         </div>
                         <div class="subtitle__form">
                             <p>чтобы оформить заказ</p>
                         </div>
-                        <div class="inp__form opport__inputForm">
+                        <div id="buy" class="inp__form opport__inputForm" >
                             <input type="text" class="input__form" placeholder="Имя" name="name" id="name" required>
                             <br>
                             <input type="text" class="input__form input__form2 text__number" id="LabBoardPhone" placeholder="+7 (___) ___-__-__" name="phone"  required >
                             <br>
                             <input type="text" class="input__form" placeholder="Email" name="email" id="email" required>
                         </div>
-                        <div class="btn__form">
+                        <div class="btn__form" >
                             <button type="button" data-callback='onSubmit' onclick="SubmitData()" id="LabBoardBtnSubmit"><p>ОТПРАВИТЬ ЗАЯВКУ</p></button>
                         </div>
                     </form>
@@ -161,7 +161,13 @@
                         <div class="subtitleLapboard__block1">
                             <img src="./../images/Stm32/labBoard_rd.jpg">
                         </div>
-                        <div class="subtitleLapboard__block2">
+                        <div class="subtitleLapboard__block1_mobile">
+                            <img src="./../images/Stm32/labBoard_rd_mobile.jpg">
+                            <div class="subtitleLapboard__block2__text_mobile">
+                                <p>Лабораторный стенд может быть использован для разработки системы управления умным домом, умной теплицей, конвейером, участком дорожной сети, парковкой.</p>
+                            </div>
+                        </div>
+                        <div  class="subtitleLapboard__block2">
                             <div class="subtitleLapboard__block2__text">
                                 <p>Лабораторный стенд может быть использован для разработки системы управления умным домом, умной теплицей, конвейером, участком дорожной сети, парковкой.</p>
                             </div>
@@ -170,11 +176,17 @@
                                 <div class="FileLapboard"> <a href="./../files/labboard.pdf" target="_blank"><img src="./../images/practiceExchange/icon/document__icon.svg"></a> </div>
                                 
                             </div>
-                            <div class="moneyBlock">
+                            <div  class="moneyBlock" >
                                 <p>Стоимость одного LabBoard с методическим обеспечением - <strong>100 000 рублей.</strong>
                                     При заказе от 10 штук, <strong>стоимость будет ниже.</strong></p>
                             </div>
+                            <div class="document__mobile" >
+                                <div ><p >Описание LabBoard</p></div>
+                                <div  class="FileLapboard"> <a href="./../files/labboard.pdf" target="_blank" ><img src="./../images/practiceExchange/icon/document__icon.svg"></a> </div>
+                                
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -188,8 +200,8 @@
 
 
 
-    <footer>
-        <div class="container">
+    <footer >
+        <div class="container" >
             <div class="footer__inner">
                 <div class="block_text">
                     <p class="footer__title">Вас интересует<br> разработка проекта?</p>

@@ -8,6 +8,7 @@
     <meta name="keywords" content="исследования и разработка, инновации, прогрессивные решения, веб-приложения, мобильные приложения, аппаратные разработки, интернет вещей, виртуальная реальность, дополненная реальность, цифровая трансформация, эффективные технологии">
     <link rel="shortcut icon" href="./assets/images/generalPictures/logo/logo.svg">
     <link rel="stylesheet" href="./assets/style/index.css?v=<?php echo rand(0, 900);?>">
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/plugins/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./assets/plugins/slick-1.8.1/slick/slick-theme.css" />
@@ -18,41 +19,45 @@
 
 <body>
     <img src="./assets/images/R&dMain/background/главная.svg" alt="home-background" class="home-background">
+
     <header class="header">
         <div class="header_content_inner">
             <div class="header__logo">
-                <a href="#topSite"><img src="./assets/images/generalPictures/logo/logo.svg" alt="header-icon"></a>
+                <a><img src="https://rdcenter.ru/assets/images/practiceExchange/logo/logo__black.svg" alt="header-icon" id="header__logo"></a>
             </div>
-            <div class="nawPc">
-                <nav class="header__nav">
-                    <ul class="nav__list">
-                        <li id="menu1" class="nav__item"><a href="#about">О нас</a></li>
-                        <li id="menu2" class="nav__item"><a href="#services">Услуги</a></li>
-                        <li id="menu3" class="nav__item"><a href="#projects">Проекты</a></li>
-                        <li id="menu4" class="nav__item"><a href="#contact">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="header__burger" id="burgerMenu">
-                <div class="header__burger__inner">
-                        <div class="header__burger-line"></div>
-                        <div class="header__burger-line"></div>
-                        <div class="header__burger-line"></div>
+            <div>
+                <div class="header__info__menu">
+                    <div class="contact__header">
+                        <div class="contact__header__text">
+                            <p class="header__text">Ответим на Ваши вопросы в Telegram</p>
+                            <p class="phone__header text__number"><a class="link__number" href="tel:+89518465531">8-951-846-55-31</a></p>
+                        </div>
+                        <div class="contact__header__icon">
+                            <a href="https://t.me/kolokchik" target="_blank"><img src="https://rdcenter.ru/assets/images/practiceExchange/icon/tg.svg"></a>
+                        </div>
+                    </div>
+                    <div class="burder__header">
+                        <div class="burger__header__nav">
+                            <nav>
+                                <ul>
+                                    <li id="menu1" class="nav__item"><a class="jscorLink" href="#about" onclick="open__close_burger()">О нас</a></li>
+                                    <li id="menu2" class="nav__item"><a class="jscorLink" href="#services" onclick="open__close_burger()">Услуги</a></li>
+                                    <li id="menu3" class="nav__item"><a class="jscorLink" href="#projects" onclick="open__close_burger()">Проекты</a></li>
+                                    <li id="menu4" class="nav__item"><a class="jscorLink" href="#contact" onclick="open__close_burger()">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <img src="https://rdcenter.ru/assets/images/practiceExchange/icon/limp.svg" id="limp__header">
+                    </div>
+                    <div class="header__burger" id="burgerMenu" onclick="open__close_burger()">
+                        <div class="header__burger__inner">
+                            <div class="header__burger-line"></div>
+                            <div class="header__burger-line"></div>
+                            <div class="header__burger-line"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="nav__header_mobl">
-                    <nav class="nav__header_mobl__inner">
-                        <ul class="nav__list__mob">
-                            <li id="menu1" class="nav__item"><a href="#about">О нас</a></li>
-                            <li id="menu2" class="nav__item"><a href="#servicesmob">Услуги</a></li>
-                            <li id="menu3" class="nav__item"><a href="#projectsmob">Проекты</a></li>
-                            <li id="menu4" class="nav__item"><a href="#contact">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <img class="girl__boorger" src="./assets/images/R&dMain/moble/boorgerHeadermob.svg">
-                </div>
             </div>
-
         </div>
     </header>
     <div class="container">
@@ -496,10 +501,11 @@
 
         </div>
     </footer>
+    <div class="head__eventNoneBgs"></div>
 </body>
 <script src="./assets/scripts/index.js?v=<?php echo rand(0, 900);?>"></script>
 <script src="./assets/scripts/slider.js?v=<?php echo rand(0, 900);?>"></script>
-<script src="./assets/scripts/boorger.js?v=<?php echo rand(0, 900);?>"></script>
+<script src="./assets/scripts/function__burjs.js?v=<?php echo rand(0, 900);?>"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 

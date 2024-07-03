@@ -40,11 +40,12 @@ function trackScroll() {
   }
   else {
     var aboutModuleHeight = document.getElementById('about').offsetHeight;
-    var servicesModuleHeight = document.getElementById('services').offsetHeight+600;
-    var projectsModuleHeight = document.getElementById('projects').offsetHeight;
+    if (document.getElementById('services')) var servicesModuleHeight = document.getElementById('services').offsetHeight+600;
+    if (document.getElementById('projects')) var projectsModuleHeight = document.getElementById('projects').offsetHeight;
   }
 
-  var contactModuleHeight = document.getElementById('contact').offsetHeight;
+  if (document.getElementById('contact')) var contactModuleHeight = document.getElementById('contact').offsetHeight;
+  if (document.getElementById('buy')) var buyModuleHeight = document.getElementById('buy').offsetHeight;
   var pageHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
   
   if (window.innerWidth > 990) {
